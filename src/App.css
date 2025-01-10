@@ -4,13 +4,15 @@
   box-sizing: border-box;
 }
 
+
 body {
   font-family: "Poppins", sans-serif;
   background: #fbf8cc;
   color: #03045e;
-  width: 1440px;
+  width:1490px;
+  /* width: 1440px; /* Mac*/
   position: relative;
-  border: 1px solid #000000;
+  /* border: 1px solid #000000; */
 }
 
 /* Header Styles */
@@ -204,7 +206,7 @@ nav a {
 .case-studies {
   margin-top: 100px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 120px;
 }
 
@@ -343,7 +345,7 @@ nav a {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 40px;
 }
 
 .skills-description {
@@ -356,7 +358,7 @@ nav a {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 100px;
   margin-left: 287px;
 }
@@ -364,9 +366,9 @@ nav a {
 .skill-category h3 {
   font-weight: 600;
   font-size: 24px;
-  line-height: 40px;
+  line-height: 20px;
   color: #03045e;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .skill-category ul {

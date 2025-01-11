@@ -11,10 +11,8 @@ function Contacts() {
 				<img src={Contact} alt="Contact Image" />
 				<div class="contact-info">
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet
-						vulputate tristique quam felis. Id phasellus dui orci vulputate
-						consequat nulla proin. Id sit scelerisque neque, proin bibendum
-						diam.
+						Feel free to reach out for collaboration, inquiries, or
+						opportunities to create impactful and innovative solutions together!
 					</p>
 					<div class="contact-links">
 						<a href="mailto:menonvishnu26@gmail.com" target="_blank">

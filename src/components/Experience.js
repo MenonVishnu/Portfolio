@@ -9,9 +9,12 @@ function Experience() {
 		<section id="experience">
 			<h2>experience.</h2>
 			<p class="description">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate
-				tristique quam felis. Id phasellus dui orci vulputate consequat nulla
-				proin. Id sit scelerisque neque, proin bibendum diam.
+				I bring expertise in QA leadership, backend development, and API
+				creation, with experience at Jio Platforms and NJC Labs. My journey
+				includes leading testing for high-impact projects, mentoring team
+				members, and earning accolades like the Spotlight Award. I thrive in
+				collaborative environments, delivering innovative and high-quality
+				solutions.
 			</p>
 
 			<div class="timeline">

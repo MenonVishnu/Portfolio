@@ -7,10 +7,7 @@ function Skills() {
 			<h2>skills.</h2>
 			<div class="skills-content">
 				<div class="skills-description">
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet
-						vulputate
-					</p>
+					<p></p>
 				</div>
 				<div class="skills-grid">
 					<div class="skill-category">

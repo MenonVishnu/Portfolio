@@ -11,7 +11,7 @@ var Project1 = {
 	title: "Budget Application API",
 	tech: "Golang, Gorilla/Mux",
 	description:
-		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed aliquam sollicitudin rhoncus morbi. Tincidunt quam sem elit a convallis. Eget ipsum, velit vitae eu nunc, consequat, at.",
+		"Developed a daily budgeting app using GoLang and Gorilla/mux. Features CRUD operations, user/admin routes, and seamless MongoDB integration.",
 };
 
 var Project2 = {
@@ -21,7 +21,7 @@ var Project2 = {
 	title: "Cyberlocker using Blockchain",
 	tech: "React.js, Solidity, IPFS",
 	description:
-		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed aliquam sollicitudin rhoncus morbi. Tincidunt quam sem elit a convallis. Eget ipsum, velit vitae eu nunc, consequat, at.",
+		"Built a decentralized file storage system using ReactJS, Solidity, and IPFS. Enabled secure file sharing through smart contracts.",
 };
 
 var Project3 = {
@@ -31,7 +31,7 @@ var Project3 = {
 	title: "T-Shirt Store API",
 	tech: "Node, Express, MongoDB",
 	description:
-		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed aliquam sollicitudin rhoncus morbi. Tincidunt quam sem elit a convallis. Eget ipsum, velit vitae eu nunc, consequat, at.",
+		"Created an e-commerce API with Node.js and MongoDB, implementing JWT-based authentication, CRUD operations, RazorPay payment integration, and Cloudinary photo storage.",
 };
 
 var Project4 = {
@@ -41,7 +41,16 @@ var Project4 = {
 	title: "Portfolio Website",
 	tech: "React.js, HTML, CSS",
 	description:
-		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed aliquam sollicitudin rhoncus morbi. Tincidunt quam sem elit a convallis. Eget ipsum, velit vitae eu nunc, consequat, at.",
+		"A Simple static portfolio website showcasing my Projects, Experience & Skills. ",
+};
+
+var Project5 = {
+	image: ProjImage,
+	date: "October 2024",
+	link: "https://github.com/MenonVishnu",
+	title: "LegalSetu",
+	tech: "Python, Chainlit",
+	description: "A RAG based Legal AI Assistant",
 };
 
 function Projects() {
@@ -49,9 +58,10 @@ function Projects() {
 		<section id="project">
 			<h2>projects.</h2>
 			<p class="description">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate
-				tristique quam felis. Id phasellus dui orci vulputate consequat nulla
-				proin. Id sit scelerisque neque, proin bibendum diam.
+				Explore some of the exciting projects I’ve worked on, showcasing my
+				expertise in backend development, API creation, and blockchain
+				integration. Each project reflects my problem-solving skills and passion
+				for developing efficient, user-focused solutions.
 			</p>
 
 			<div class="case-studies">
@@ -59,6 +69,7 @@ function Projects() {
 				<ProjectCard data={Project2} />
 				<ProjectCard data={Project3} />
 				<ProjectCard data={Project4} />
+				<ProjectCard data={Project5} />
 			</div>
 		</section>
 	);

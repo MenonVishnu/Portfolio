@@ -12,7 +12,10 @@ function HeroSection() {
 				<h1>Backend Developer</h1>
 				<p>based in India.</p>
 				<div class="group-11">
-					<a href="#" class="resume-button">
+					<a
+						href="https://drive.google.com/file/d/1AeXFVK7v6V_5BP8Fkdmu_iuhvkHExVmM/view?usp=drive_link"
+						target="_blank"
+						class="resume-button">
 						Resume
 					</a>
 				</div>

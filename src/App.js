@@ -16,12 +16,10 @@ function App() {
 			<Navbar />
 			<main>
 				<HeroSection />
-
 				<About />
-
 				<Skills />
-				<Experience />
 				<Projects />
+				<Experience />
 				<Contacts />
 			</main>
 		</div>

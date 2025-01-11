@@ -2,6 +2,47 @@ import React from "react";
 import "../App.css";
 
 import ProjImage from "../assets/projdemo.png";
+import ProjectCard from "./ProjectCard";
+
+var Project1 = {
+	image: ProjImage,
+	date: "June 2024",
+	link: "https://github.com/MenonVishnu",
+	title: "Budget Application API",
+	tech: "Golang, Gorilla/Mux",
+	description:
+		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed aliquam sollicitudin rhoncus morbi. Tincidunt quam sem elit a convallis. Eget ipsum, velit vitae eu nunc, consequat, at.",
+};
+
+var Project2 = {
+	image: ProjImage,
+	date: "March 2023",
+	link: "https://github.com/MenonVishnu",
+	title: "Cyberlocker using Blockchain",
+	tech: "React.js, Solidity, IPFS",
+	description:
+		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed aliquam sollicitudin rhoncus morbi. Tincidunt quam sem elit a convallis. Eget ipsum, velit vitae eu nunc, consequat, at.",
+};
+
+var Project3 = {
+	image: ProjImage,
+	date: "October 2022",
+	link: "https://github.com/MenonVishnu",
+	title: "T-Shirt Store API",
+	tech: "Node, Express, MongoDB",
+	description:
+		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed aliquam sollicitudin rhoncus morbi. Tincidunt quam sem elit a convallis. Eget ipsum, velit vitae eu nunc, consequat, at.",
+};
+
+var Project4 = {
+	image: ProjImage,
+	date: "January 2025",
+	link: "https://github.com/MenonVishnu",
+	title: "Portfolio Website",
+	tech: "React.js, HTML, CSS",
+	description:
+		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed aliquam sollicitudin rhoncus morbi. Tincidunt quam sem elit a convallis. Eget ipsum, velit vitae eu nunc, consequat, at.",
+};
 
 function Projects() {
 	return (
@@ -14,45 +55,10 @@ function Projects() {
 			</p>
 
 			<div class="case-studies">
-				<div class="case-study">
-					<img src={ProjImage} alt="Case Study 1" />
-					<p class="date">June 2024</p>
-					<h3>Budget Application API</h3>
-					<h4>
-						<b>Tech Stack:</b> Golang, Gorilla/Mux
-					</h4>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed
-						aliquam sollicitudin rhoncus morbi. Tincidunt quam sem elit a
-						convallis. Eget ipsum, velit vitae eu nunc, consequat, at.
-					</p>
-				</div>
-				<div class="case-study">
-					<img src={ProjImage} alt="Case Study 1" />
-					<p class="date">March 2023</p>
-					<h3>Cyberlocker Using Blockchain</h3>
-					<h4>
-						<b>Tech Stack:</b> React.js, Solidity, IPFS
-					</h4>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed
-						aliquam sollicitudin rhoncus morbi. Tincidunt quam sem elit a
-						convallis. Eget ipsum, velit vitae eu nunc, consequat, at.
-					</p>
-				</div>
-				<div class="case-study">
-					<img src={ProjImage} alt="Case Study 1" />
-					<p class="date">October 2022</p>
-					<h3>T-Shirt Store API</h3>
-					<h4>
-						<b>Tech Stack:</b> Node, Express, MongoDB
-					</h4>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed
-						aliquam sollicitudin rhoncus morbi. Tincidunt quam sem elit a
-						convallis. Eget ipsum, velit vitae eu nunc, consequat, at.
-					</p>
-				</div>
+				<ProjectCard data={Project1} />
+				<ProjectCard data={Project2} />
+				<ProjectCard data={Project3} />
+				<ProjectCard data={Project4} />
 			</div>
 		</section>
 	);

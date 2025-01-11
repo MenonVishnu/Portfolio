@@ -15,18 +15,27 @@ function Navbar() {
 				</a>
 				<a href="#about">About</a>
 				<a href="#skill">Skills</a>
-				<a href="#experience">Experience</a>
 				<a href="#project">Projects</a>
+				<a href="#experience">Experience</a>
 				<a href="#contact">Contact</a>
 			</nav>
 			<div class="social-icons">
-				<a href="#" class="github-icon">
+				<a
+					href="https://github.com/MenonVishnu"
+					target="_blank"
+					class="github-icon">
 					<img src={GithubIcon} alt="Github" />
 				</a>
-				<a href="#" class="behance-icon">
+				<a
+					href="https://www.linkedin.com/in/menonvishnu01/"
+					target="_blank"
+					class="linkedIn-icon">
 					<img src={LinkedInIcon} alt="LinkedIn" />
 				</a>
-				<a href="#" class="twitter-icon">
+				<a
+					href="mailto:menonvishnu26@gmail.com"
+					target="_blank"
+					class="email-icon">
 					<img src={EmailIcon} alt="Email" />
 				</a>
 			</div>

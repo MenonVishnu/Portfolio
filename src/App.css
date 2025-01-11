@@ -137,6 +137,11 @@ nav a {
 	z-index: -1;
 }
 
+.resume-button:hover {
+	background-color: black;
+  color: #f5ee84;
+}
+
 /* About Section */
 
 #about,
@@ -164,6 +169,7 @@ nav a {
 	font-size: 24px;
 	line-height: 44px;
 	max-width: 900px;
+	margin-bottom: 20px;
 }
 
 .timeline {
@@ -265,6 +271,29 @@ nav a {
 	font-weight: 400;
 	font-size: 18px;
 	line-height: 32px;
+}
+
+.project-link a {
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 27px;
+	text-decoration: none;
+	color: #474306;
+	padding: 5px;
+	border: 1px solid #474306;
+	border-radius: 6px;
+}
+
+.project-link a:hover {
+	color: #f5ee84;
+	/* background-color: #474306; */
+	background-color: black;
+}
+
+.project-link {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 /* Contact Section */
@@ -399,7 +428,7 @@ nav a {
 	font-size: 24px;
 	line-height: 20px;
 	color: #03045e;
-	margin-bottom: 40px;
+	margin-bottom: 35px;
 }
 
 .skill-category ul {
@@ -407,16 +436,16 @@ nav a {
 }
 
 .skill-category li {
-	margin-bottom: 25px;
+	margin-bottom: 22px;
 }
 
 .skill-name {
 	display: block;
 	font-weight: 500;
 	font-size: 18px;
-	line-height: 27px;
+	line-height: 20px;
 	color: #03045e;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 }
 
 .skill-bar {

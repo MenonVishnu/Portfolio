@@ -1,7 +1,7 @@
 import React from "react";
 import "../App.css";
 
-import Profile from "../assets/profile-filter.png";
+import Profile from "../assets/profile.png";
 import Vector from "../assets/vector.png";
 
 function HeroSection() {

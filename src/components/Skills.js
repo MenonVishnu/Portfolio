@@ -16,31 +16,31 @@ function Skills() {
 							<li>
 								<span class="skill-name">Golang</span>
 								<div class="skill-bar">
-									<div class="skill-progress" style={{ width: 90 + "%" }}></div>
+									<div class="skill-progress" style={{ width: 80 + "%" }}></div>
 								</div>
 							</li>
 							<li>
 								<span class="skill-name">Node.js</span>
 								<div class="skill-bar">
-									<div class="skill-progress" style={{ width: 90 + "%" }}></div>
+									<div class="skill-progress" style={{ width: 65 + "%" }}></div>
 								</div>
 							</li>
 							<li>
 								<span class="skill-name">Express.js</span>
 								<div class="skill-bar">
-									<div class="skill-progress" style={{ width: 90 + "%" }}></div>
+									<div class="skill-progress" style={{ width: 75 + "%" }}></div>
 								</div>
 							</li>
 							<li>
 								<span class="skill-name">MongoDB</span>
 								<div class="skill-bar">
-									<div class="skill-progress" style={{ width: 90 + "%" }}></div>
+									<div class="skill-progress" style={{ width: 80 + "%" }}></div>
 								</div>
 							</li>
 							<li>
 								<span class="skill-name">MySQL</span>
 								<div class="skill-bar">
-									<div class="skill-progress" style={{ width: 90 + "%" }}></div>
+									<div class="skill-progress" style={{ width: 60 + "%" }}></div>
 								</div>
 							</li>
 						</ul>
@@ -50,33 +50,33 @@ function Skills() {
 						<h3>Tools</h3>
 						<ul>
 							<li>
+								<span class="skill-name">Docker</span>
+								<div class="skill-bar">
+									<div class="skill-progress" style={{ width: 60 + "%" }}></div>
+								</div>
+							</li>
+							<li>
 								<span class="skill-name">Redis</span>
 								<div class="skill-bar">
-									<div class="skill-progress" style={{ width: 90 + "%" }}></div>
+									<div class="skill-progress" style={{ width: 40 + "%" }}></div>
 								</div>
 							</li>
 							<li>
 								<span class="skill-name">Github</span>
 								<div class="skill-bar">
-									<div class="skill-progress" style={{ width: 90 + "%" }}></div>
+									<div class="skill-progress" style={{ width: 60 + "%" }}></div>
 								</div>
 							</li>
 							<li>
 								<span class="skill-name">Microsoft Excel</span>
 								<div class="skill-bar">
-									<div class="skill-progress" style={{ width: 90 + "%" }}></div>
-								</div>
-							</li>
-							<li>
-								<span class="skill-name">Docker</span>
-								<div class="skill-bar">
-									<div class="skill-progress" style={{ width: 90 + "%" }}></div>
+									<div class="skill-progress" style={{ width: 75 + "%" }}></div>
 								</div>
 							</li>
 							<li>
 								<span class="skill-name">Microsoft Azure Devops</span>
 								<div class="skill-bar">
-									<div class="skill-progress" style={{ width: 90 + "%" }}></div>
+									<div class="skill-progress" style={{ width: 40 + "%" }}></div>
 								</div>
 							</li>
 						</ul>

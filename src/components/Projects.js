@@ -2,10 +2,12 @@ import React from "react";
 import "../App.css";
 
 import ProjImage from "../assets/projdemo.png";
+import ProjImage1 from "../assets/dummyproject-1.jpg"
+import ProjImage2 from "../assets/dummyproject-2.jpg"
 import ProjectCard from "./ProjectCard";
 
 var Project1 = {
-	image: ProjImage,
+	image: ProjImage1,
 	date: "June 2024",
 	link: "https://github.com/MenonVishnu",
 	title: "Budget Application API",
@@ -15,7 +17,7 @@ var Project1 = {
 };
 
 var Project2 = {
-	image: ProjImage,
+	image: ProjImage2,
 	date: "March 2023",
 	link: "https://github.com/MenonVishnu",
 	title: "Cyberlocker using Blockchain",
@@ -25,7 +27,7 @@ var Project2 = {
 };
 
 var Project3 = {
-	image: ProjImage,
+	image: ProjImage1,
 	date: "October 2022",
 	link: "https://github.com/MenonVishnu",
 	title: "T-Shirt Store API",
@@ -35,7 +37,7 @@ var Project3 = {
 };
 
 var Project4 = {
-	image: ProjImage,
+	image: ProjImage2,
 	date: "January 2025",
 	link: "https://github.com/MenonVishnu",
 	title: "Portfolio Website",
@@ -45,7 +47,7 @@ var Project4 = {
 };
 
 var Project5 = {
-	image: ProjImage,
+	image: ProjImage1,
 	date: "October 2024",
 	link: "https://github.com/MenonVishnu",
 	title: "LegalSetu",

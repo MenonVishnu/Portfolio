@@ -316,12 +316,12 @@ nav a:hover {
   max-width: 640px;
 }
 
-/* .contact-info p {
+.contact-info p {
   font-weight: 400;
   font-size: 24px;
   line-height: 44px;
   margin-bottom: 21px;
-} */
+}
 
 .contact-links {
   display: flex;
@@ -544,12 +544,6 @@ nav a:hover {
 /* Media Query */
 
 @media (max-width: 768px) {
-  body {
-    padding: 0px;
-    margin: 0px;
-    width: 100%;
-  }
-
   .menu-toggle {
     display: block;
   }
@@ -571,120 +565,25 @@ nav a:hover {
     display: flex;
   }
 
-  header {
-    position: fixed;
-    padding: 10px 0px 10px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #fbf8cc; /* Same as body background */
-    /* z-index: 1000; */
-    border-bottom: 1px solid rgba(3, 4, 94, 0.1); /* Subtle border */
-    backdrop-filter: blur(5px);
-  }
-
-  .social-icons {
-    display: none;
-  }
-
   .hero {
     flex-direction: column;
     text-align: center;
-    /* gap: 20px; */
-    padding: 30px 97px;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 50px;
   }
 
-  .vector {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .hero-text {
+    margin-bottom: 60px;
   }
 
-  .hero h1 {
-    font-size: clamp(48px, 9vw, 72px);
-    line-height: clamp(48px, 9vw, 116px);
-  }
-
-  .hero img {
-    height: 80%;
-    width: 80%;
-  }
-
-  .mask-group {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .vector {
-    top: 38px;
-  }
-
-  .group-10,
   .group-6 {
-    display: none;
+    top: 980px;
   }
 
-  #about,
-  #skill,
-  #experience,
-  #project,
-  #contact {
-    padding: 50px 37px;
-  }
-
-  #about h2,
-  #skill h2,
-  #experience h2,
-  #project h2,
-  #contact h2 {
-    font-weight: 800;
-    font-size: clamp(34px, 8vw, 40px);
-    line-height: 56px;
-    color: #4b5c09;
-    margin-bottom: 32px;
-  }
-
-  .description {
-    font-size: clamp(10px, 4vw, 15px);
-    line-height: clamp(15px, 5vh, 25px);
+  .group-10 {
+    top: 595px;
   }
 
   .timeline {
-    margin-left: 0px;
-  }
-
-  .timeline h3 {
-    font-weight: 600;
-    font-size: clamp(14px, 4vw, 20px);
-    line-height: 30px;
-  }
-
-  .timeline h4 {
-    color: #474306;
-    font-weight: 400;
-    padding: 5px 0px 5px 20px;
-  }
-
-  .timeline > div::before {
-    left: 0px;
-    top: 24px;
-  }
-
-  .company-info {
-    padding-left: 25px;
-    height: 60px;
-  }
-
-  .experience-description {
-    padding-left: 20px;
-    font-size: clamp(10px, 4vw, 15px);
+    margin-left: 0;
   }
 
   .skills-grid {
@@ -692,51 +591,56 @@ nav a:hover {
     grid-template-columns: 1fr;
   }
 
-  .skill-category h3,
-  .case-study h3 {
-    font-size: clamp(12px, 6vw, 18px);
-  }
-
-  .case-study p {
-    font-size: clamp(12px, 4vw, 18px);
-  }
-
   .case-studies {
     grid-template-columns: 1fr;
-    object-fit: cover;
-    width: 100%;
-    height: auto;
   }
 
   .contact-content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #contact img {
-    object-fit: cover;
-    width: 100%;
-    height: auto;
-  }
-
-  .contact-content {
-    margin-top: 0px;
-  }
-
-  .contact-links a {
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 28px;
-    color: #474306;
-    text-decoration: none;
-  }
-
-  .footer-content {
-    font-size: 12px;
-    display: flex;
-    gap: 10px;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
   }
 }
+
+@media (max-width: 480px) {
+  .social-icons {
+    display: none;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(32px, 8vw, 48px);
+  }
+
+  section h2 {
+    font-size: clamp(5px, 5vw, 5px);
+  }
+
+  .description {
+    font-size: 16px;
+  }
+}
+
+/* Animation for mobile menu */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+nav.active {
+  animation: slideDown 0.3s ease-out;
+}
+
+/* Color Pallate:  */
+/* .main-body{
+  color: #03045e; primary-text
+  color: #474306;
+  color: #4b5c09; h2-text
+  color: #f5ee84;
+  color: #f7f197; 
+  color: #fbf8cc; background-color
+} */

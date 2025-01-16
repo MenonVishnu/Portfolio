@@ -79,6 +79,11 @@ nav a:hover {
 	height: 27px;
 }
 
+.social-icons a:hover {
+	border-radius: 50%;
+	background-color: #f5ee84;
+}
+
 /* Hero Section */
 .hero {
 	padding: 60px 97px;

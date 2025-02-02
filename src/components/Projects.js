@@ -86,9 +86,9 @@ var Project8 = {
 var Project9 = {
 	image: ProjImage2,
 	date: "January 2025",
-	link: "https://github.com/MenonVishnu/Go-URLShortner",
+	link: "https://github.com/MenonVishnu/Go-WeatherReport",
 	title: "Go-Weather Report",
-	tech: "Golang, SMTP",
+	tech: "Golang, SMTP, CRON, Redis, Docker-Compose",
 	description:
 		"API which allows user to get weather report of the city they specify",
 };

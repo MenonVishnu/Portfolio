@@ -1,4 +1,5 @@
 import React from "react";
+import Modal from "./Modal/Modal";
 import "../App.css";
 
 function ProjectCard(props) {
@@ -20,6 +21,7 @@ function ProjectCard(props) {
 				<b>Tech Stack:</b> {props.data.tech}
 			</h4>
 			<p>{props.data.description}</p>
+			<Modal />
 		</div>
 	);
 }

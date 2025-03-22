@@ -1,6 +1,9 @@
 import React from "react";
 import "./App.css";
 
+//Vercel Insights
+import { SpeedInsights } from '@vercel/speed-insights/react';
+
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import Skills from "./components/Skills";

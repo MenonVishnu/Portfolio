@@ -21,7 +21,7 @@ function ProjectCard(props) {
 				<b>Tech Stack:</b> {props.data.tech}
 			</h4>
 			<p>{props.data.description}</p>
-			<Modal />
+			<Modal data={props.data} />
 		</div>
 	);
 }

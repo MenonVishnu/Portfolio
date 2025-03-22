@@ -1,6 +1,40 @@
 .modal-container {
-    margin-top: 60px;
+	margin-top: 60px;
 	background-color: white;
 	width: 90vw;
 	height: 85vh;
+}
+
+.popup-content {
+	opacity: 0;
+	/* transform: translateY(30px); */
+	transform: scale(0.7);
+	animation: scaleIn 0.3s ease-out forwards;
+}
+
+button {
+	cursor:pointer;
+}
+
+@keyframes scaleIn {
+	from {
+		opacity: 0;
+		transform: scale(0.7);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+/* discarded for now */
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0px);
+	}
 }

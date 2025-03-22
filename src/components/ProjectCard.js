@@ -20,7 +20,7 @@ function ProjectCard(props) {
 			<h4>
 				<b>Tech Stack:</b> {props.data.tech}
 			</h4>
-			<p>{props.data.description}</p>
+			{/* <p>{props.data.description}</p> */}
 			<Modal data={props.data} />
 		</div>
 	);

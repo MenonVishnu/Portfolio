@@ -18,7 +18,10 @@ function ProjectCard(props) {
 
 			<h3>{props.data.title}</h3>
 			<h4>
-				<b>Tech Stack:</b> {props.data.tech}
+				<b>Tech Stack:</b>{" "}
+				{props.data.techIcon.map((icon) => {
+					return <img className="tech-icon" src={icon} />;
+				})}
 			</h4>
 			{/* <p>{props.data.description}</p> */}
 			<Modal data={props.data} />

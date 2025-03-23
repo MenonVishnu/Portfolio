@@ -20,6 +20,7 @@ import Docker from "../assets/Icons/docker.svg";
 import HTML from "../assets/Icons/html5.svg";
 import CSS from "../assets/Icons/css.svg";
 import Mux from "../assets/Icons/mux.png";
+import Chainlit from "../assets/Icons/chainlit.png";
 
 const ProjectData = [
 	{
@@ -83,7 +84,7 @@ const ProjectData = [
 		link: "https://github.com/MenonVishnu",
 		title: "LegalSetu",
 		tech: "Python, Chainlit",
-		techIcon: [Python],
+		techIcon: [Python, Chainlit],
 		description: "A RAG based Legal AI Assistant",
 	},
 	{

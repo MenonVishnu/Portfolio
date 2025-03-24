@@ -251,7 +251,12 @@ nav a:hover {
 	margin-top: 100px;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	gap: 120px;
+	gap: 90px;
+}
+
+.case-study {
+	padding: 10px;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .case-study img {
@@ -290,7 +295,6 @@ h4 .tech-icon {
 	margin-left: -5px;
 	z-index: -1;
 	border-radius: 50%;
-	/* border: 1px solid black; */
 	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 	background-color: white;
 	transition: transform 0.3s ease-in-out;

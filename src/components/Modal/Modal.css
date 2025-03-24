@@ -13,7 +13,20 @@
 }
 
 button {
-	cursor:pointer;
+	padding: 5px 30px 5px 30px;
+	font-weight: 600;
+	font-size: 15px;
+	text-decoration: none;
+	color: #474306;
+	background-color: #fbf8cc;
+	border: 1px solid #474306;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+button:hover {
+	color: #f5ee84;
+	background-color: #4b5c09;
 }
 
 @keyframes scaleIn {

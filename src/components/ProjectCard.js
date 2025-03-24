@@ -31,7 +31,9 @@ function ProjectCard(props) {
 				})}
 			</h4>
 			{/* <p>{props.data.description}</p> */}
-			<Modal data={props.data} />
+			<div class="button-container">
+				<Modal data={props.data} />
+			</div>
 		</div>
 	);
 }

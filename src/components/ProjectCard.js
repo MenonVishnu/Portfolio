@@ -7,32 +7,36 @@ function ProjectCard(props) {
     <div className="case-study">
       <div className="title-container">
         <h3>{props.data.title}</h3>
-        <img src={props.data.image} alt="Case Study 1" />
+        <img className="project-image" src={props.data.image} alt="Case Study 1" />
       </div>
       <div className="project-link">
         {/* github link first or date first? */}
-        <i>
+        <div className="date">{props.data.date}</div>
+        {/* <i>
           <a href={props.data.link} target="_blank">
             Github
           </a>
-        </i>
-        <p className="date">{props.data.date}</p>
+        </i> */}
       </div>
 
-      <h4>
-        <b>Tech Stack:</b>{" "}
-        {props.data.techIcon.map((icon, index) => {
-          return (
-            <img
-              className="tech-icon"
-              src={icon}
-              key={index}
-              style={{ zIndex: props.data.techIcon.length - index }}
-            />
-          );
-        })}
-      </h4>
       <p>{props.data.description}</p>
+
+      <div className="techstack">
+        <b>Tech Stack</b>{" "}
+        <div className="tech-icons">
+          {props.data.techIcon.map((icon, index) => {
+            return (
+              <img
+                className="tech-icon"
+                src={icon}
+                key={index}
+                style={{ zIndex: props.data.techIcon.length - index }}
+              />
+            );
+          })}
+        </div>
+      </div>
+
       <div class="button-container">
         <Modal data={props.data} />
       </div>

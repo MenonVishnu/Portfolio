@@ -1,54 +1,118 @@
 .modal-container {
-	margin-top: 60px;
-	background-color: white;
-	width: 90vw;
-	height: 85vh;
+  position: relative;
+  padding: 10px;
+  margin-top: 60px;
+  background-color: #fbf8cc;
+  opacity: 0.95;
+  width: 90vw;
+  height: 85vh;
 }
 
 .popup-content {
-	opacity: 0;
-	/* transform: translateY(30px); */
-	transform: scale(0.7);
-	animation: scaleIn 0.3s ease-out forwards;
+  opacity: 1;
+  transform: scale(0.7);
+  animation: scaleIn 0.3s ease-out forwards;
 }
 
-button {
-	width: 141px;
-	height: 34px;
-	font-weight: 600;
-	font-size: 16px;
-	text-decoration: none;
-	color: #474306;
-	background-color: #fbf8cc;
-	border: 1px solid #474306;
-	border-radius: 6px;
-	cursor: pointer;
+.modal-inside-container {
+  width: 90vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.x-button {
+  position: absolute;
+  top: 30px;
+  right: 28px;
+  padding: 0; /* Remove unnecessary padding */
+  font-weight: bold;
+  height: 36px;
+  width: 36px;
+  font-size: 18px; /* Adjust to fit better */
+  line-height: 1; /* Prevent extra vertical space */
+  border-radius: 50%;
+  cursor: pointer;
+  color: #03045e;
+  border: 3px solid #03045e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+
+  text-align: center;
+  font-family: Arial, sans-serif; /* Ensures a consistent symbol rendering */
 }
 
-button:hover {
-	color: #f5ee84;
-	background-color: #4b5c09;
+.modal-title {
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 70px;
+  color: #4b5c09;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.architecture {
+  opacity: 1;
+  width: 500px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.right {
+  width: 500px;
+}
+
+.center {
+  margin-top: 5px;
+  width: 3px;
+  height: 65vh;
+  background-color: #4b5c09;
+}
+
+.button {
+  width: 141px;
+  height: 34px;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  color: #474306;
+  background-color: #fbf8cc;
+  border: 1px solid #474306;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: #f5ee84;
+  background-color: #4b5c09;
 }
 
 @keyframes scaleIn {
-	from {
-		opacity: 0;
-		transform: scale(0.7);
-	}
-	to {
-		opacity: 1;
-		transform: scale(1);
-	}
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* discarded for now */
 @keyframes fadeInUp {
-	from {
-		opacity: 0;
-		transform: translateY(30px);
-	}
-	to {
-		opacity: 1;
-		transform: translateY(0px);
-	}
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }

@@ -1,11 +1,18 @@
+.popup-overlay {
+  z-index: 1050 !important;
+}
+
 .modal-container {
   position: relative;
   padding: 10px;
-  margin-top: 60px;
   background-color: #fbf8cc;
   opacity: 0.95;
   width: 90vw;
-  height: 85vh;
+}
+
+.modal-container::-webkit-scrollbar {
+  margin-top: 60px;
+  width: 2px;
 }
 
 .popup-content {
@@ -65,15 +72,33 @@
   align-items: center;
 }
 
-.right {
-  width: 500px;
-}
-
 .center {
   margin-top: 5px;
   width: 3px;
   height: 65vh;
   background-color: #4b5c09;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 500px;
+}
+
+.tech-stack {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.tech {
+  /* width: 500px; */
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: 10px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.26);
+  /* box-shadow: 0px 0px 6px #4b5c0926; */
 }
 
 .button {

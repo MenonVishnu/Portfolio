@@ -24,6 +24,7 @@ import Chainlit from "../assets/Icons/chainlit.png";
 
 //Import Architecture
 import Architecture_9 from "../assets/ProjectArchitecture/goweather.svg";
+import Architecture_7 from "../assets/ProjectArchitecture/gourlshort.svg";
 
 const ProjectData = [
   {
@@ -32,7 +33,7 @@ const ProjectData = [
     date: "July 2022",
     link: "https://github.com/MenonVishnu/OTT-Platform-Analysis-Tool",
     title: "OTT Platform Analysis",
-    tech: "Python, QlikSense",
+    tech: ["Python", "QlikSense"],
     techIcon: [Python, Qlik],
     shortDescription: "",
     description:
@@ -45,7 +46,7 @@ const ProjectData = [
     date: "October 2022",
     link: "https://github.com/MenonVishnu/TShirtStore-API",
     title: "T-Shirt Store API",
-    tech: "Node, Express, MongoDB",
+    tech: ["Node", "Express", "MongoDB"],
     techIcon: [Node, Express, Mongo],
     shortDescription: "",
     description:
@@ -57,7 +58,7 @@ const ProjectData = [
     date: "November 2022",
     link: "https://github.com/MenonVishnu/NoteTakingApplication-API",
     title: "Note Taking Application - API",
-    tech: "Node, Express, MongoDB",
+    tech: ["Node", "Express", "MongoDB"],
     techIcon: [Node, Express, Mongo],
     shortDescription: "",
     description: "A basic Note taking Application.",
@@ -68,7 +69,7 @@ const ProjectData = [
     date: "March 2023",
     link: "https://github.com/dipeshsanil/CUB",
     title: "Cyberlocker using Blockchain",
-    tech: "React.js, Solidity, IPFS",
+    tech: ["React.js", "Solidity", "IPFS"],
     techIcon: [ReactJS, Solidity, IPFS],
     shortDescription: "",
     description:
@@ -80,7 +81,7 @@ const ProjectData = [
     date: "June 2024",
     link: "https://github.com/MenonVishnu/BudgetApplication",
     title: "Budget Application API",
-    tech: "Golang, Gorilla/Mux",
+    tech: ["Golang", "Gorilla/Mux"],
     techIcon: [Go, Mux],
     shortDescription: "",
     description:
@@ -92,7 +93,7 @@ const ProjectData = [
     date: "October 2024",
     link: "https://github.com/MenonVishnu",
     title: "LegalSetu",
-    tech: "Python, Chainlit",
+    tech: ["Python", "Chainlit"],
     techIcon: [Python, Chainlit],
     shortDescription: "",
     description: "A RAG based Legal AI Assistant",
@@ -103,11 +104,12 @@ const ProjectData = [
     date: "December 2024",
     link: "https://github.com/MenonVishnu/Go-URLShortner",
     title: "Go-URL Shortner",
-    tech: "Golang, Go-Fiber, Redis, Docker, Docker-Compose",
+    tech: ["Golang", "Go-Fiber", "Redis", "Docker", "Docker-Compose"],
     techIcon: [Go, Redis, Docker],
     shortDescription: "",
     description:
       "API which allows user to redirect from shortened URL to the actual URL",
+    architecture: Architecture_7,
   },
   {
     id: 8,
@@ -115,7 +117,7 @@ const ProjectData = [
     date: "January 2025",
     link: "https://github.com/MenonVishnu/Portfolio",
     title: "Portfolio Website",
-    tech: "React.js, HTML, CSS",
+    tech: ["React.js", "HTML", "CSS"],
     techIcon: [ReactJS, HTML, CSS],
     shortDescription: "",
     description:
@@ -127,7 +129,7 @@ const ProjectData = [
     date: "January 2025",
     link: "https://github.com/MenonVishnu/Go-WeatherReport",
     title: "Go-Weather Report",
-    tech: "Golang, SMTP, CRON, Redis, Docker-Compose",
+    tech: ["Golang", "SMTP", "CRON", "Redis", "Docker-Compose"],
     techIcon: [Go, Redis, Docker],
     shortDescription: "",
     description:

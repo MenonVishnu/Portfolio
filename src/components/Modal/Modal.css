@@ -4,14 +4,15 @@
 
 .modal-container {
   position: relative;
-  padding: 10px;
+  padding: 10px 10px 30px 10px;
   background-color: #fbf8cc;
   opacity: 0.95;
+  border-radius: 15px;
   /* width: 90vw; */
 }
 
 .modal-container::-webkit-scrollbar {
-  margin-top: 60px;
+  /* margin-top: 60px; */
   width: 2px !important;
 }
 
@@ -29,18 +30,18 @@
 }
 .x-button {
   position: absolute;
-  top: 30px;
-  right: 28px;
+  top: 12px;
+  right: 12px;
   padding: 0; /* Remove unnecessary padding */
-  font-weight: bold;
+  font-weight: 500;
   height: 36px;
   width: 36px;
-  font-size: 18px; /* Adjust to fit better */
+  font-size: 24px; /* Adjust to fit better */
   line-height: 1; /* Prevent extra vertical space */
   border-radius: 50%;
   cursor: pointer;
   color: #03045e;
-  border: 3px solid #03045e;
+  /* border: 3px solid #03045e; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,14 +56,17 @@
   font-size: 50px;
   line-height: 70px;
   color: #4b5c09;
+  margin-bottom: 20px;
 }
 
 .content-container {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .architecture {
+  border-radius: 5px;
   opacity: 1;
   width: 500px;
 }
@@ -73,7 +77,7 @@
 }
 
 .center {
-  margin-top: 5px;
+  margin: 0px 5px 0px 5px;
   width: 3px;
   height: 65vh;
   background-color: #4b5c09;
@@ -86,8 +90,15 @@
   width: 500px;
 }
 
-.tech-title {
-  margin-bottom: 20px;
+.modal-description {
+  margin: 0px 0px 20px 0px;
+  font-size: 15px;
+  line-height: 20px;
+  color: #474306;
+}
+
+.section-title {
+  margin-bottom: 15px;
   color: #03104a;
 }
 
@@ -95,6 +106,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 10px;
+  margin-bottom: 20px;
 }
 
 .tech {
@@ -108,8 +120,31 @@
   justify-content: center;
 }
 
-.span-2{
-	grid-column: span 2;
+.link {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.github-link {
+  height: 30px;
+  /* width: 27px; */
+  line-height: 27px;
+  padding: 0px 10px 0px 10px;
+  border-radius: 6px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.github-link:hover {
+  border-radius: 50%;
+  transform: scale(1.2);
+
+  /* background-color: #f5ee84; */
+}
+
+.span-2 {
+  grid-column: span 2;
 }
 
 .button {
@@ -150,5 +185,22 @@
   to {
     opacity: 1;
     transform: translateY(0px);
+  }
+}
+
+@media (max-width: 900px) {
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .center {
+    margin: 20px 0px 20px 0px;
+    height: 3px;
+    /* width: 3px; */
+    width: 75vh;
+    background-color: #4b5c09;
   }
 }

@@ -7,7 +7,11 @@ function ProjectCard(props) {
     <div className="case-study">
       <div className="title-container">
         <h3>{props.data.title}</h3>
-        <img className="project-image" src={props.data.image} alt="Case Study 1" />
+        <img
+          className="project-image"
+          src={props.data.image}
+          alt="Case Study 1"
+        />
       </div>
       <div className="project-link">
         {/* github link first or date first? */}
@@ -19,7 +23,7 @@ function ProjectCard(props) {
         </i> */}
       </div>
 
-      <p>{props.data.description}</p>
+      <p>{props.data.shortDescription}</p>
 
       <div className="techstack">
         <b>Tech Stack</b>{" "}

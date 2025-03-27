@@ -2,6 +2,10 @@ import React from "react";
 import Popup from "reactjs-popup";
 import "./Modal.css";
 
+//Icon Import:
+import Github from "../../assets/github.png";
+import www from "../../assets/www.png";
+
 const overlayStyle = { background: "rgba(0,0,0,0.5)" };
 
 const Modal = (props) => (
@@ -29,24 +33,27 @@ const Modal = (props) => (
           </div>
           <div className="center"></div>
           <div className="right">
-            <b className="tech-title">Tech Stack</b>{" "}
-            <div class="tech-stack">
-              {props.data.tech.map((tech, index) => {
-                console.log(tech.length);
-                return (
-                  <div
-                    key={index}
-                    className={`tech ${tech.length > 10 ? "span-2" : ""}`}
-                  >
-                    {tech}
-                  </div>
-                );
-              })}
+            <b className="section-title">Description</b>{" "}
+            <div class="modal-description">{props.data.description}</div>
+            <b className="section-title">Project Links</b>{" "}
+            <div className="link">
+              <a target="_blank" href={props.data.githubLink}>
+                <img className="github-link" src={Github} />
+              </a>
+              <a className="live-link" target="_blank" href={props.data.link}>
+                <img className="github-link" src={www} />
+              </a>
             </div>
-            <div className="other-description">
-              <div class="modal-description">{props.data.description}</div>
-              <div class="modal-description">github link</div>
-              <div class="modal-description">full description</div>
+            <b className="section-title">Tech Stack</b>{" "}
+            <div class="tech-stack">
+              {props.data.tech.map((tech, index) => (
+                <div
+                  key={index}
+                  className={`tech ${tech.length > 10 ? "span-2" : ""}`}
+                >
+                  {tech}
+                </div>
+              ))}
             </div>
           </div>
         </div>

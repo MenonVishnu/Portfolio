@@ -7,12 +7,12 @@
   padding: 10px;
   background-color: #fbf8cc;
   opacity: 0.95;
-  width: 90vw;
+  /* width: 90vw; */
 }
 
 .modal-container::-webkit-scrollbar {
   margin-top: 60px;
-  width: 2px;
+  width: 2px !important;
 }
 
 .popup-content {
@@ -86,6 +86,11 @@
   width: 500px;
 }
 
+.tech-title {
+  margin-bottom: 20px;
+  color: #03104a;
+}
+
 .tech-stack {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -93,12 +98,18 @@
 }
 
 .tech {
-  /* width: 500px; */
+  /* width: 108px; */
   border-radius: 10px;
   padding: 10px;
   margin-right: 10px;
+  color: #474306;
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.26);
-  /* box-shadow: 0px 0px 6px #4b5c0926; */
+  display: flex;
+  justify-content: center;
+}
+
+.span-2{
+	grid-column: span 2;
 }
 
 .button {

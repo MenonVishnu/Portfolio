@@ -55,15 +55,15 @@ nav a {
 	line-height: 27px;
 	text-decoration: none;
 	color: #03045e;
+	transition: transform 0.2s ease-in-out;
 }
 
 nav a:hover {
 	font-weight: 500;
-	font-size: 18px;
+	transform: scale(1.1);
 	line-height: 27px;
 	text-decoration: none;
 	color: #474306;
-	margin: 0 -1px 0 -1px;
 }
 
 .social-icons {
@@ -74,6 +74,7 @@ nav a:hover {
 .social-icons a {
 	display: flex;
 	align-items: center;
+	transition: transform 0.3s ease-in-out;
 }
 
 .social-icons img {
@@ -84,6 +85,7 @@ nav a:hover {
 .social-icons a:hover {
 	border-radius: 50%;
 	background-color: #f5ee84;
+	transform: scale(1.1);
 }
 
 /* Hero Section */
@@ -241,8 +243,6 @@ nav a:hover {
 	line-height: 44px;
 	max-width: 900px;
 }
-
-
 
 /* Contact Section */
 #contact {

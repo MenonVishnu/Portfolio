@@ -27,6 +27,7 @@ import SQLite from "../assets/Icons/sqlite.png";
 import Architecture_1 from "../assets/ProjectArchitecture/Ott.svg";
 import Architecture_4 from "../assets/ProjectArchitecture/cub.png";
 import Architecture_7 from "../assets/ProjectArchitecture/gourlshort.svg";
+import Architecture_8 from "../assets/ProjectArchitecture/portfolio.png";
 import Architecture_9 from "../assets/ProjectArchitecture/goweather.svg";
 import Architecture_10 from "../assets/ProjectArchitecture/videoadplayer.png";
 
@@ -93,7 +94,7 @@ const ProjectData = [
     githubLink: "https://github.com/MenonVishnu/BudgetApplication",
     title: "Budget Application API",
     tech: ["Golang", "Gorilla/Mux"],
-    techIcon: [Go, Mux],
+    techIcon: [Go, Mux, Mongo],
     shortDescription:
       "Developed a daily budgeting app using GoLang and Gorilla/mux. Features CRUD operations, user/admin routes, and seamless MongoDB integration.",
     description:
@@ -143,6 +144,7 @@ After the URL is shortened, User can use the shortened URL to redirect it to the
     shortDescription:
       "A Simple static portfolio website showcasing my Projects, Experience & Skills.",
     description: `A Simple static portfolio website showcasing my Projects, Experience & Skills.`,
+    architecture: Architecture_8,
   },
   {
     id: 9,
@@ -154,7 +156,13 @@ After the URL is shortened, User can use the shortened URL to redirect it to the
     techIcon: [Go, Redis, Docker],
     shortDescription:
       "API which allows user to get weather report of the city they specify",
-    description: `API which allows user to get weather report of the city they specify `,
+    description: `The API provides several endpoints for different functionalities.The GET /weather/{city} endpoint first 
+	checks if the weather data for the given city is available in Redis. If found, it returns the cached data; otherwise, it 
+	fetches the data from OpenWeatherAPI, stores it in Redis, and then returns the response. The POST /addname endpoint appends 
+	user details to a .txt file, while the GET /delname/{email} endpoint removes a user's details from the file 
+	based on their email. A CRON job runs daily at 9 AM, extracting all emails and city details from the file. 
+	It then checks Redis for weather data for each city. If the data exists, it emails the respective users; 
+	otherwise, it fetches and stores the data from OpenWeatherAPI before sending emails with the updated weather information.`,
     architecture: Architecture_9,
   },
   {
@@ -167,7 +175,12 @@ After the URL is shortened, User can use the shortened URL to redirect it to the
     techIcon: [Go, ReactJS, CSS, SQLite, Docker],
     shortDescription:
       "API which allows user to get weather report of the city they specify",
-    description: `API which allows user to get weather report of the city they specify `,
+    description: `The frontend features a video player that initially calls an API to fetch advertisements from the backend. 
+	Once the ads are retrieved, the video player starts, displaying ad overlays in random positions on the screen. When a user 
+	clicks on an ad, an API call logs the ad ID, timestamp, IP address, and video timestamp. On the backend, the system ensures 
+	that the advertisement and clickdata tables exist, creating them if necessary. It also loads dummy advertisements from dummydata.json 
+	if they are not already present. The backend provides a GET /ads endpoint to fetch all advertisements and a POST /ads/click endpoint to 
+	store ad click details, including the IP retrieved from the request headers.`,
     architecture: Architecture_10,
   },
   //Add new projects here, Also consider above projects for image number

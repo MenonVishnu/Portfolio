@@ -120,8 +120,14 @@
   justify-content: center;
 }
 
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
 .link {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   display: flex;
   justify-content: start;
   align-items: center;

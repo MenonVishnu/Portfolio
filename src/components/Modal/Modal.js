@@ -35,15 +35,27 @@ const Modal = (props) => (
           <div className="right">
             <b className="section-title">Description</b>{" "}
             <div class="modal-description">{props.data.description}</div>
-            <b className="section-title">Project Links</b>{" "}
-            <div className="link">
-              <a target="_blank" href={props.data.githubLink}>
-                <img className="github-link" src={Github} />
-              </a>
-              <a className="live-link" target="_blank" href={props.data.link}>
-                <img className="github-link" src={www} />
-              </a>
-            </div>
+            {!props.data.link && !props.data.githubLink ? null : (
+              <div className="links">
+                <b className="section-title">Project Links</b>{" "}
+                <div className="link">
+                  {!props.data.githubLink ? null : (
+                    <a target="_blank" href={props.data.githubLink}>
+                      <img className="github-link" src={Github} />
+                    </a>
+                  )}
+                  {!props.data.link ? null : (
+                    <a
+                      className="live-link"
+                      target="_blank"
+                      href={props.data.link}
+                    >
+                      <img className="github-link" src={www} />
+                    </a>
+                  )}
+                </div>
+              </div>
+            )}
             <b className="section-title">Tech Stack</b>{" "}
             <div class="tech-stack">
               {props.data.tech.map((tech, index) => (

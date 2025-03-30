@@ -147,7 +147,12 @@ img.tech-icon {
 	}
 
 	.case-study h3 {
-		font-size: clamp(12px, 6vw, 18px);
+		font-size: clamp(12px, 6vw, 20px);
+
+		max-width: 90%;
+		white-space: normal;
+		word-break: break-word;
+		overflow-wrap: break-word;
 	}
 
 	.case-study p {

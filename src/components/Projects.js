@@ -25,6 +25,8 @@ import SQLite from "../assets/Icons/sqlite.png";
 
 //Import Architecture
 import Architecture_1 from "../assets/ProjectArchitecture/Ott.svg";
+import Architecture_2 from "../assets/ProjectArchitecture/tshirtstore.svg";
+import Architecture_3 from "../assets/ProjectArchitecture/notetaking.svg";
 import Architecture_4 from "../assets/ProjectArchitecture/cub.png";
 import Architecture_5 from "../assets/ProjectArchitecture/budgetapplication.png";
 import Architecture_6 from "../assets/ProjectArchitecture/legalsetu.png";
@@ -65,7 +67,7 @@ const ProjectData = [
 			processing. Customers can also review products, update their profiles, and track their order history. For administrators, the 
 			API offers functionalities to manage products, update orders, and handle user accounts. It also includes a manager role with 
 			limited access to user data. With built-in authentication, authorization, and payment handling, the API ensures a smooth and secure shopping experience.`,
-		architecture: "",
+		architecture: Architecture_2,
 	},
 	{
 		id: 3,
@@ -84,6 +86,7 @@ const ProjectData = [
 		user accounts by retrieving user details, updating profiles, and deleting accounts when necessary. With built-in 
 		authentication, authorization, and route protection, the API ensures data security and controlled access, making 
 		it a reliable solution for structured note management.`,
+		architecture: Architecture_3,
 	},
 	{
 		id: 4,

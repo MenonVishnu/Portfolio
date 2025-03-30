@@ -3,6 +3,7 @@ import "./App.css";
 
 //Vercel Insights
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import { Analytics } from "@vercel/analytics/react";
 
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
@@ -16,6 +17,8 @@ import Footer from "./components/Footer";
 function App() {
 	return (
 		<div>
+			<SpeedInsights />
+			<Analytics />
 			<Navbar />
 			<main>
 				<HeroSection />
@@ -26,7 +29,6 @@ function App() {
 				<Contacts />
 				<Footer />
 			</main>
-			<SpeedInsights />
 		</div>
 	);
 }

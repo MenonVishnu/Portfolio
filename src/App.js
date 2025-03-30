@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 
 //Vercel Insights
-import { SpeedInsights } from '@vercel/speed-insights/react';
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
@@ -14,20 +14,21 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 
 function App() {
-  return (
-    <div>
-      <Navbar />
-      <main>
-        <HeroSection />
-        <About />
-        <Skills />
-        <Projects />
-        <Experience />
-        <Contacts />
-        <Footer />
-      </main>
-    </div>
-  );
+	return (
+		<div>
+			<Navbar />
+			<main>
+				<HeroSection />
+				<About />
+				<Skills />
+				<Projects />
+				<Experience />
+				<Contacts />
+				<Footer />
+			</main>
+			<SpeedInsights />
+		</div>
+	);
 }
 
 export default App;

@@ -196,7 +196,7 @@
 
 @media (max-width: 900px) {
 	.modal-container {
-		width: clamp(330px, 85vw, 900px);
+		width: clamp(330px, 90vw, 900px);
 	}
 
 	.modal-inside-container {

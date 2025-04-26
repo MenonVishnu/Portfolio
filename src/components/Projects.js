@@ -145,7 +145,6 @@ const ProjectData = [
 		image: ProjImage1,
 		date: "December 2024",
 		githubLink: "https://github.com/MenonVishnu/Go-URLShortner",
-		link: "https://www.google.com",
 		title: "Go-URL Shortner",
 		tech: ["Golang", "Go-Fiber", "Redis", "Docker", "Docker-Compose"],
 		techIcon: [Go, Redis, Docker],

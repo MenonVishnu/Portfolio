@@ -184,6 +184,7 @@ After the URL is shortened, User can use the shortened URL to redirect it to the
 		image: ProjImage1,
 		date: "January 2025",
 		githubLink: "https://github.com/MenonVishnu/Go-WeatherReport",
+		link: "https://go-weatherreport-reactjs.onrender.com/",
 		title: "Go-Weather Report",
 		tech: ["Golang", "SMTP", "CRON", "Redis", "Docker-Compose"],
 		techIcon: [Go, Redis, Docker],

@@ -68,7 +68,7 @@ nav a:hover {
 
 .social-icons {
 	display: flex;
-	gap: 29px;
+	gap: 15px;
 }
 
 .social-icons a {
@@ -527,7 +527,14 @@ nav a:hover {
 	}
 
 	.social-icons {
-		display: none;
+		/* display: none; */
+		margin-left: 25px;
+		gap: 10px;
+	}
+
+	.social-icons img {
+		width: 23px;
+		height: 23px;
 	}
 
 	.hero {

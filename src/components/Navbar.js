@@ -4,6 +4,7 @@ import "../App.css";
 import GithubIcon from "../assets/github.png";
 import LinkedInIcon from "../assets/linkedin.png";
 import EmailIcon from "../assets/email.png";
+import LeetCodeIcon from "../assets/leetcode.png";
 
 function Navbar() {
 	return (
@@ -31,6 +32,9 @@ function Navbar() {
 					target="_blank"
 					class="linkedIn-icon">
 					<img src={LinkedInIcon} alt="LinkedIn" />
+				</a>
+				<a href="" target="_blank" class="leetcode-icon">
+					<img src={LeetCodeIcon} alt="Leetcode" />
 				</a>
 				<a
 					href="mailto:menonvishnu26@gmail.com"

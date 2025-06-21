@@ -13,7 +13,7 @@ function HeroSection() {
 				<p>based in India.</p>
 				<div class="group-11">
 					<a
-						href="https://drive.google.com/file/d/1I8KdpXuxN9uZ6TgIggcUcLjEuEhzVrQA/view?usp=sharing"
+						href="https://drive.google.com/file/d/1X274m3tBNQjwGPBmNvn90OXebVl3GRIJ/view?usp=sharing"
 						target="_blank"
 						class="resume-button">
 						Resume

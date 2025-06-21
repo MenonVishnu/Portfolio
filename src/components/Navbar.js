@@ -33,7 +33,10 @@ function Navbar() {
 					class="linkedIn-icon">
 					<img src={LinkedInIcon} alt="LinkedIn" />
 				</a>
-				<a href="" target="_blank" class="leetcode-icon">
+				<a
+					href="https://leetcode.com/u/kOUS6mIh2b/"
+					target="_blank"
+					class="leetcode-icon">
 					<img src={LeetCodeIcon} alt="Leetcode" />
 				</a>
 				<a

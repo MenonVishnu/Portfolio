@@ -6,38 +6,59 @@
 	box-sizing: border-box;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 :root {
 	scrollbar-width: none;
 	-ms-overflow-style: none;
-	--bg-color: #fbf8cc;
-	--text-color: #03045e;
-	--accent-color: #4b5c09;
-	--btn-bg: #f5ee84;
-	--btn-text: #474306;
-	--border-color: rgba(3, 4, 94, 0.1);
-	--logo-color: #03045e;
-	--card-shadow: rgba(75, 92, 9, 0.18);
+	--bg-color: #fafafa;
+	--text-color: #111111;
+	--accent-color: #000000;
+	--btn-bg: #111111;
+	--btn-text: #ffffff;
+	--border-color: rgba(0, 0, 0, 0.08);
+	--logo-color: #111111;
+	--card-shadow: rgba(0, 0, 0, 0.06);
 	--card-bg: transparent;
-	--card-border: none;
-	--timeline-dot: #03045e;
+	--card-border: 1px solid rgba(0, 0, 0, 0.08);
+	--timeline-dot: #111111;
+	--font-serif: 'Playfair Display', Georgia, serif;
+	
+	/* Terminal Light Mode Variables */
+	--terminal-bg: #ffffff;
+	--terminal-border: rgba(0, 0, 0, 0.08);
+	--terminal-header-border: rgba(0, 0, 0, 0.06);
+	--terminal-text: rgba(0, 0, 0, 0.45);
+	--terminal-profile-border: rgba(0, 0, 0, 0.1);
+	--terminal-profile-bg: #111113;
 }
 
 body.dark-mode {
-	--bg-color: #0f172a;
-	--text-color: #cbd5e1;
-	--accent-color: #38bdf8;
-	--btn-bg: #1e293b;
-	--btn-text: #f8fafc;
-	--border-color: rgba(255, 255, 255, 0.1);
-	--logo-color: #f8fafc;
-	--card-shadow: rgba(0, 0, 0, 0.4);
-	--card-bg: #1e293b;
-	--card-border: 1px solid rgba(255, 255, 255, 0.05);
-	--timeline-dot: #38bdf8;
+	--bg-color: #0a0a0c;
+	--text-color: #f4f4f5;
+	--accent-color: #ffffff;
+	--btn-bg: #ffffff;
+	--btn-text: #0a0a0c;
+	--border-color: rgba(255, 255, 255, 0.08);
+	--logo-color: #ffffff;
+	--card-shadow: rgba(0, 0, 0, 0.5);
+	--card-bg: #111113;
+	--card-border: 1px solid rgba(255, 255, 255, 0.08);
+	--timeline-dot: #ffffff;
+
+	/* Terminal Dark Mode Variables */
+	--terminal-bg: #0c0c0e;
+	--terminal-border: rgba(255, 255, 255, 0.08);
+	--terminal-header-border: rgba(255, 255, 255, 0.05);
+	--terminal-text: rgba(255, 255, 255, 0.35);
+	--terminal-profile-border: rgba(255, 255, 255, 0.15);
+	--terminal-profile-bg: #111113;
 }
 
 body {
-	font-family: "Poppins", sans-serif;
+	font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 	background: var(--bg-color);
 	color: var(--text-color);
 	width: 100%;

@@ -27,51 +27,76 @@ nav {
 }
 
 nav a {
-	font-weight: 400;
-	font-size: 16px;
+	font-weight: 500;
+	font-size: 15px;
 	line-height: 27px;
 	text-decoration: none;
 	color: var(--text-color);
-	transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+	opacity: 0.55;
+	transition: opacity 0.25s ease;
 }
 
-nav a:hover, nav a.active {
-	font-weight: 600;
-	transform: scale(1.1);
-	line-height: 27px;
-	text-decoration: none;
-	color: var(--accent-color);
+nav a:hover {
+	opacity: 0.95;
 }
 
-.social-icons {
-	display: flex;
-	gap: 15px;
+nav a.active {
+	font-weight: 500;
+	opacity: 1;
 }
 
-.social-icons a {
+.italic-serif-logo {
+	font-family: var(--font-serif), Georgia, serif;
+	font-style: italic;
+	font-weight: 700;
+}
+
+.nav-right {
 	display: flex;
 	align-items: center;
-	transition: transform 0.3s ease-in-out;
+	gap: 20px;
 }
 
-.social-icons img {
-	width: 27px;
-	height: 27px;
-}
-
-.social-icons a:hover {
+.theme-toggle-btn {
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	width: 36px;
+	height: 36px;
 	border-radius: 50%;
-	background-color: var(--btn-bg);
-	transform: scale(1.1);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s;
+	color: var(--text-color);
 }
 
-/* Theme Toggle rotation */
-body.dark-mode .theme-toggle {
-	transform: rotate(360deg);
+.theme-toggle-btn:hover {
+	background-color: var(--border-color);
+	transform: rotate(15deg);
 }
 
-body.dark-mode .social-icons img {
-	filter: invert(1);
+.lets-talk-btn {
+	background-color: var(--text-color);
+	color: var(--bg-color);
+	padding: 10px 24px;
+	border-radius: 9999px;
+	font-family: 'Inter', sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+	text-decoration: none;
+	transition: transform 0.2s ease, opacity 0.2s ease, background-color 0.3s;
+	display: inline-block;
+}
+
+.lets-talk-btn:hover {
+	transform: translateY(-1px);
+	opacity: 0.95;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+body.dark-mode .lets-talk-btn:hover {
+	box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
 }
 
 @media (max-width: 900px) {

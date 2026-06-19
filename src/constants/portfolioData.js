@@ -42,7 +42,7 @@ import NJCIcon from "../assets/njc.png";
 import ContactImage from "../assets/contact.png";
 
 // Hero Images
-import ProfileImage from "../assets/profile.png";
+import ProfileImage from "../assets/Profile-demo1.png";
 import VectorImage from "../assets/vector.png";
 
 export const heroData = {

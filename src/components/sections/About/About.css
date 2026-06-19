@@ -1,0 +1,38 @@
+#about {
+	padding: 100px 97px;
+	scroll-margin-top: 90px;
+}
+
+#about h2 {
+	font-weight: 800;
+	font-size: 100px;
+	line-height: 116px;
+	color: var(--accent-color);
+	margin-bottom: 32px;
+}
+
+.description {
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 44px;
+	max-width: 900px;
+	margin-bottom: 20px;
+}
+
+@media (max-width: 900px) {
+	#about {
+		padding: 50px 24px;
+	}
+
+	#about h2 {
+		font-weight: 800;
+		font-size: clamp(45px, 10vw, 60px);
+		line-height: 56px;
+		margin-bottom: 32px;
+	}
+
+	.description {
+		font-size: clamp(14px, 4vw, 18px);
+		line-height: clamp(22px, 5vh, 28px);
+	}
+}

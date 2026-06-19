@@ -1,9 +1,8 @@
-import React, { useState } from "react";
-import "../App.css";
+// Centralized Portfolio Constants
 
 import ProjImage1 from "../assets/dummyproject-1.jpg";
 import ProjImage2 from "../assets/dummyproject-2.jpg";
-import ProjectCard from "./ProjectCard";
+import ProjectDemo from "../assets/projdemo.png";
 
 // Import Icons
 import Python from "../assets/Icons/python.svg";
@@ -23,7 +22,7 @@ import Mux from "../assets/Icons/mux.png";
 import Chainlit from "../assets/Icons/chainlit.png";
 import SQLite from "../assets/Icons/sqlite.png";
 
-//Import Architecture
+// Import Architecture Diagram Assets
 import Architecture_1 from "../assets/ProjectArchitecture/Ott.svg";
 import Architecture_2 from "../assets/ProjectArchitecture/tshirtstore.svg";
 import Architecture_3 from "../assets/ProjectArchitecture/notetaking.svg";
@@ -35,7 +34,102 @@ import Architecture_8 from "../assets/ProjectArchitecture/portfolio.png";
 import Architecture_9 from "../assets/ProjectArchitecture/goweather.svg";
 import Architecture_10 from "../assets/ProjectArchitecture/videoadplayer.png";
 
-const ProjectData = [
+// Experience Icons
+import JioIcon from "../assets/jio.png";
+import NJCIcon from "../assets/njc.png";
+
+// Contact Image
+import ContactImage from "../assets/contact.png";
+
+// Hero Images
+import ProfileImage from "../assets/profile.png";
+import VectorImage from "../assets/vector.png";
+
+export const heroData = {
+	greeting: "Hello, I'm Vishnu,",
+	title: "Full Stack Developer",
+	location: "based in India.",
+	resumeLink: "https://drive.google.com/file/d/1X274m3tBNQjwGPBmNvn90OXebVl3GRIJ/view?usp=sharing",
+	profileImg: ProfileImage,
+	vectorImg: VectorImage,
+};
+
+export const aboutData = {
+	paragraphs: [
+		"As a Computer Engineering graduate with a CGPA of 9.63, I thrive on challenges and constantly seek opportunities to grow. My journey includes leading QA teams, excelling in backend development, and contributing to high-priority projects. I’ve been recognized with the Spotlight Award for exceptional leadership and was a finalist in the ATMECS Gen AI Hackathon 2024.",
+		"With a strong skill set that includes ReactJS, GoLang, and MongoDB, combined with certifications like the Mulesoft Certified Developer and Google Go Specialization, I’m well-equipped to tackle diverse technical challenges. My projects and internships reflect my commitment to innovation and excellence."
+	]
+};
+
+export const skillsData = {
+	categories: [
+		{
+			title: "Language/Framework",
+			skills: [
+				{ name: "Golang", level: "Advanced" },
+				{ name: "Node.js", level: "Intermediate" },
+				{ name: "Express.js", level: "Advanced" },
+				{ name: "MongoDB", level: "Advanced" },
+				{ name: "MySQL", level: "Intermediate" },
+			],
+		},
+		{
+			title: "Tools",
+			skills: [
+				{ name: "Docker", level: "Intermediate" },
+				{ name: "Redis", level: "Basic" },
+				{ name: "Github", level: "Advanced" },
+				{ name: "Microsoft Excel", level: "Advanced" },
+				{ name: "Azure DevOps", level: "Basic" },
+			],
+		},
+		{
+			title: "Soft Skills",
+			skills: [
+				{ name: "Problem Solving", level: "Expert" },
+				{ name: "Team Work", level: "Expert" },
+				{ name: "Time Management", level: "Expert" },
+				{ name: "Communication", level: "Expert" },
+			],
+		},
+	]
+};
+
+export const freelanceData = {
+	title: "freelance projects.",
+	description: "Successfully built and deployed production-grade applications for independent clients. Focused on reliable service architectures, frontend visual excellence, and modern integration workflows.",
+	gigs: [
+		{
+			id: 1,
+			title: "Backend Scalability Solutions",
+			date: "Nov 2024",
+			badge: "GoLang Backend",
+			description: "A comprehensive backend application built with GoLang and MongoDB, focusing on high scalability, robust concurrency routing, and API performance.",
+			tech: ["Golang", "MongoDB", "REST API", "Docker"],
+			image: ProjImage1
+		},
+		{
+			id: 2,
+			title: "Dynamic Frontend Dashboard",
+			date: "Dec 2024",
+			badge: "React Application",
+			description: "A dynamic and responsive frontend dashboard implemented with ReactJS, featuring real-time state visualization, interactive UI modules, and glassmorphic designs.",
+			tech: ["React.js", "CSS Grid", "ChartJS", "Framer Motion"],
+			image: ProjImage2
+		},
+		{
+			id: 3,
+			title: "Full-Stack Integration Platform",
+			date: "Feb 2025",
+			badge: "Full-Stack System",
+			description: "An innovative full-stack platform integrating intelligent APIs for automated analysis, structured data parsing, and streamlined client workflows.",
+			tech: ["Node.js", "React.js", "Express.js", "REST APIs"],
+			image: ProjectDemo
+		}
+	]
+};
+
+export const projectsData = [
 	{
 		id: 1,
 		image: ProjImage1,
@@ -137,7 +231,7 @@ const ProjectData = [
 		techIcon: [Python, Chainlit],
 		shortDescription: "A RAG based Legal AI Assistant",
 		description: `LegalSetu is an AI-driven platform designed to provide legal support to both common people and businesses. 
-		Users submit queries, which are processed through a vector database and an LLM (Large Language Model) to retrieve ranked and relevant legal responses.`,
+		Users submit queries, which are processed through a vector database and an LLM (Large Generation Model) to retrieve ranked and relevant legal responses.`,
 		architecture: Architecture_6,
 	},
 	{
@@ -217,29 +311,41 @@ After the URL is shortened, User can use the shortened URL to redirect it to the
 	store ad click details, including the IP retrieved from the request headers.`,
 		architecture: Architecture_10,
 	},
-	//Add new projects here, Also consider above projects for image number
 ];
 
-function Projects() {
-	return (
-		<section id="project">
-			<h2>projects.</h2>
-			<p class="description">
-				Explore some of the exciting projects I’ve worked on, showcasing my
-				expertise in backend development, API creation, and blockchain
-				integration. Each project reflects my problem-solving skills and passion
-				for developing efficient, user-focused solutions.
-			</p>
+export const experienceData = [
+	{
+		company: "Jio Platforms Limited",
+		role: "Associate QA Engineer",
+		date: "Dec 2023 - Present",
+		icon: JioIcon,
+		points: [
+			"Directed end‑to‑end testing across multiple high‑impact projects, employing sanity, functional, regression, and performance testing to ensure exceptional product quality, reliability, and timely delivery.",
+			"Collaborated with key stakeholders, delivered actionable insights, and mentored new team members, fostering team alignment.",
+			"Earned the prestigious Spotlight Award for exceptional leadership and proactive contributions to project success."
+		]
+	},
+	{
+		company: "NJC Labs",
+		role: "Software Developer Intern",
+		date: "Jan 2022 - Mar 2022",
+		icon: NJCIcon,
+		points: [
+			"Trained for and received the Mulesoft Certified Developer (Level ‑ 1) certificate.",
+			"Created multiple APIs using Anypoint Platform and conducted testing to ensure functionality and performance."
+		]
+	}
+];
 
-			<div class="case-studies">
-				{ProjectData.slice()
-					.reverse()
-					.map((project) => {
-						return <ProjectCard data={project} key={project.id} />;
-					})}
-			</div>
-		</section>
-	);
-}
-
-export default Projects;
+export const contactData = {
+	title: "contact.",
+	description: "Feel free to reach out for collaboration, inquiries, or opportunities to create impactful and innovative solutions together!",
+	image: ContactImage,
+	links: {
+		email: "menonvishnu26@gmail.com",
+		linkedin: "https://www.linkedin.com/in/menonvishnu01/",
+		linkedinUser: "linkedin.com/menonvishnu",
+		github: "https://github.com/MenonVishnu",
+		githubUser: "github.com/MenonVishnu"
+	}
+};

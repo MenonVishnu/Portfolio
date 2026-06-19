@@ -1,0 +1,46 @@
+#project {
+	padding: 100px 97px;
+	scroll-margin-top: 90px;
+}
+
+#project h2 {
+	font-weight: 800;
+	font-size: 100px;
+	line-height: 116px;
+	color: var(--accent-color);
+	margin-bottom: 32px;
+}
+
+.case-studies {
+	margin-top: 80px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 50px;
+}
+
+@media (max-width: 1200px) {
+	.case-studies {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 40px;
+	}
+}
+
+@media (max-width: 900px) {
+	#project {
+		padding: 50px 24px;
+	}
+
+	#project h2 {
+		font-weight: 800;
+		font-size: clamp(45px, 10vw, 60px);
+		line-height: 56px;
+		color: var(--accent-color);
+		margin-bottom: 32px;
+	}
+
+	.case-studies {
+		grid-template-columns: 1fr;
+		gap: 60px;
+		margin-top: 50px;
+	}
+}

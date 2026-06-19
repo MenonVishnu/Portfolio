@@ -1,15 +1,16 @@
 import React from "react";
-import "../App.css";
+import "./Footer.css";
 
 function Footer() {
   return (
     <section id="footer">
-      <div class="footer-content">
+      <div className="footer-content">
         <p>
           Portfolio Design Inspired By:{" "}
           <a
             href="https://www.figma.com/community/file/1079379594135318786/portfolio"
             target="_blank"
+            rel="noreferrer"
           >
             Figma
           </a>
@@ -19,13 +20,14 @@ function Footer() {
           <a
             href="https://www.freepik.com/"
             target="_blank"
+            rel="noreferrer"
           >
             Freepik
           </a>
         </p>
         <p>
           Special Thanks!{" "}
-          <a href="https://chatgpt.com/" target="_blank">
+          <a href="https://chatgpt.com/" target="_blank" rel="noreferrer">
             ChatGPT
           </a>
         </p>

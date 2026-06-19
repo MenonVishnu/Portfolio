@@ -1,5 +1,5 @@
 import React from "react";
-import Modal from "./Modal/Modal";
+import Modal from "../Modal/Modal";
 import "./ProjectCard.css";
 
 function ProjectCard(props) {
@@ -10,17 +10,11 @@ function ProjectCard(props) {
         <img
           className="project-image"
           src={props.data.image}
-          alt="Case Study 1"
+          alt="Case Study"
         />
       </div>
       <div className="project-link">
-        {/* github link first or date first? */}
         <div className="date">{props.data.date}</div>
-        {/* <i>
-          <a href={props.data.link} target="_blank">
-            Github
-          </a>
-        </i> */}
       </div>
 
       <p>{props.data.shortDescription}</p>
@@ -34,6 +28,7 @@ function ProjectCard(props) {
                 className="tech-icon"
                 src={icon}
                 key={index}
+                alt="Tech Icon"
                 style={{ zIndex: props.data.techIcon.length - index }}
               />
             );
@@ -41,7 +36,7 @@ function ProjectCard(props) {
         </div>
       </div>
 
-      <div class="button-container">
+      <div className="button-container">
         <Modal data={props.data} />
       </div>
     </div>

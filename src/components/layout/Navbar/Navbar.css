@@ -1,0 +1,84 @@
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	padding: 15px 97px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: var(--bg-color); /* Same as body background */
+	border-bottom: 1px solid var(--border-color); /* Subtle border */
+	backdrop-filter: blur(5px);
+	transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.logo {
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 36px;
+	color: var(--logo-color);
+}
+
+nav {
+	display: flex;
+	gap: 45px;
+}
+
+nav a {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 27px;
+	text-decoration: none;
+	color: var(--text-color);
+	transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+nav a:hover, nav a.active {
+	font-weight: 600;
+	transform: scale(1.1);
+	line-height: 27px;
+	text-decoration: none;
+	color: var(--accent-color);
+}
+
+.social-icons {
+	display: flex;
+	gap: 15px;
+}
+
+.social-icons a {
+	display: flex;
+	align-items: center;
+	transition: transform 0.3s ease-in-out;
+}
+
+.social-icons img {
+	width: 27px;
+	height: 27px;
+}
+
+.social-icons a:hover {
+	border-radius: 50%;
+	background-color: var(--btn-bg);
+	transform: scale(1.1);
+}
+
+/* Theme Toggle rotation */
+body.dark-mode .theme-toggle {
+	transform: rotate(360deg);
+}
+
+body.dark-mode .social-icons img {
+	filter: invert(1);
+}
+
+@media (max-width: 900px) {
+	header {
+		padding: 15px 24px;
+	}
+	nav {
+		gap: 15px;
+	}
+}

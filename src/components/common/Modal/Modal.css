@@ -5,14 +5,16 @@
 .modal-container {
 	position: relative;
 	padding: 10px 10px 30px 10px;
-	background-color: #fbf8cc;
-	opacity: 0.95;
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	border: 1px solid var(--border-color);
+	opacity: 0.98;
 	border-radius: 15px;
-	/* width: 90vw; */
+	box-shadow: 0px 10px 30px var(--card-shadow);
+	transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .modal-container::-webkit-scrollbar {
-	/* margin-top: 60px; */
 	width: 2px !important;
 }
 
@@ -28,34 +30,39 @@
 	align-items: center;
 	justify-content: center;
 }
+
 .x-button {
 	position: absolute;
 	top: 12px;
 	right: 12px;
-	padding: 0; /* Remove unnecessary padding */
+	padding: 0;
 	font-weight: 500;
 	height: 36px;
 	width: 36px;
-	font-size: 24px; /* Adjust to fit better */
-	line-height: 1; /* Prevent extra vertical space */
+	font-size: 24px;
+	line-height: 1;
 	border-radius: 50%;
 	cursor: pointer;
-	color: #03045e;
-	/* border: 3px solid #03045e; */
+	color: var(--text-color);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	background: none;
-
 	text-align: center;
-	font-family: Arial, sans-serif; /* Ensures a consistent symbol rendering */
+	font-family: Arial, sans-serif;
+	transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.x-button:hover {
+	color: var(--accent-color);
+	transform: scale(1.1);
 }
 
 .modal-title {
 	font-weight: 800;
 	font-size: 50px;
 	line-height: 70px;
-	color: #4b5c09;
+	color: var(--accent-color);
 	margin-bottom: 20px;
 }
 
@@ -66,9 +73,10 @@
 }
 
 .architecture {
-	border-radius: 5px;
+	border-radius: 8px;
 	opacity: 1;
 	width: 500px;
+	box-shadow: 0px 4px 12px var(--card-shadow);
 }
 
 .left {
@@ -80,7 +88,7 @@
 	margin: 0px 5px 0px 5px;
 	width: 3px;
 	height: 65vh;
-	background-color: #4b5c09;
+	background-color: var(--accent-color);
 }
 
 .right {
@@ -94,30 +102,33 @@
 	margin: 0px 0px 20px 0px;
 	font-size: 15px;
 	line-height: 20px;
-	color: #474306;
+	color: var(--text-color);
+	opacity: 0.9;
 }
 
 .section-title {
 	margin-bottom: 15px;
-	color: #03104a;
+	color: var(--accent-color);
 }
 
 .tech-stack {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: repeat(4, 1fr);
 	gap: 10px;
 	margin-bottom: 20px;
 }
 
 .tech {
-	/* width: 108px; */
-	border-radius: 10px;
+	border-radius: 8px;
 	padding: 10px;
-	margin-right: 10px;
-	color: #474306;
-	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.26);
+	color: var(--btn-text);
+	background: var(--btn-bg);
+	border: 1px solid var(--border-color);
+	box-shadow: 0px 2px 6px var(--card-shadow);
 	display: flex;
 	justify-content: center;
+	font-weight: 500;
+	font-size: 13px;
 }
 
 .links {
@@ -135,18 +146,18 @@
 
 .github-link {
 	height: 30px;
-	/* width: 27px; */
 	line-height: 27px;
-	padding: 0px 10px 0px 10px;
+	padding: 0px 10px;
 	border-radius: 6px;
 	transition: transform 0.3s ease-in-out;
 }
 
-.github-link:hover {
-	border-radius: 50%;
-	transform: scale(1.2);
+body.dark-mode .github-link {
+	filter: invert(1);
+}
 
-	/* background-color: #f5ee84; */
+.github-link:hover {
+	transform: scale(1.2);
 }
 
 .span-2 {
@@ -155,20 +166,22 @@
 
 .button {
 	width: 141px;
-	height: 34px;
+	height: 38px;
 	font-weight: 600;
 	font-size: 16px;
 	text-decoration: none;
-	color: #474306;
-	background-color: #fbf8cc;
-	border: 1px solid #474306;
+	color: var(--btn-text);
+	background-color: var(--bg-color);
+	border: 1.5px solid var(--btn-text);
 	border-radius: 6px;
 	cursor: pointer;
+	transition: all 0.2s ease;
 }
 
 .button:hover {
-	color: #f5ee84;
-	background-color: #4b5c09;
+	color: var(--bg-color);
+	background-color: var(--accent-color);
+	border-color: var(--accent-color);
 }
 
 @keyframes scaleIn {
@@ -182,7 +195,6 @@
 	}
 }
 
-/* discarded for now */
 @keyframes fadeInUp {
 	from {
 		opacity: 0;
@@ -208,7 +220,7 @@
 	}
 
 	.tech-stack {
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: repeat(3, 1fr);
 	}
 
 	.modal-title {
@@ -228,9 +240,9 @@
 	}
 
 	.center {
-		margin: 20px 0px 20px 0px;
+		margin: 20px 0px;
 		height: 3px;
 		width: clamp(300px, 70vw, 500px);
-		background-color: #4b5c09;
+		background-color: var(--accent-color);
 	}
 }

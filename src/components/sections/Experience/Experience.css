@@ -1,0 +1,124 @@
+#experience {
+	padding: 100px 97px;
+	scroll-margin-top: 90px;
+}
+
+#experience h2 {
+	font-weight: 800;
+	font-size: 100px;
+	line-height: 116px;
+	color: var(--accent-color);
+	margin-bottom: 32px;
+}
+
+.timeline {
+	margin-top: 40px;
+	margin-left: 287px;
+}
+
+.timeline > div {
+	position: relative;
+	margin-bottom: 50px;
+}
+
+.timeline > div::before {
+	content: "";
+	position: absolute;
+	left: -31px;
+	top: 13px;
+	width: 13px;
+	height: 13px;
+	background: var(--timeline-dot);
+	border-radius: 50%;
+	transition: background-color 0.3s ease;
+}
+
+.timeline h3 {
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 40px;
+	color: var(--text-color);
+}
+
+.company-icons {
+	width: 27px;
+	height: 27px;
+	border-radius: 50%;
+}
+
+.company-info {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.experience-description {
+	padding-left: 20px;
+	font-size: 20px;
+	line-height: 30px;
+	max-width: 900px;
+	color: var(--text-color);
+}
+
+.experience-description li {
+	margin-bottom: 10px;
+}
+
+.timeline h4 {
+	color: var(--accent-color);
+	font-weight: 400;
+	margin-bottom: 12px;
+}
+
+.timeline p {
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 44px;
+	max-width: 900px;
+}
+
+@media (max-width: 900px) {
+	#experience {
+		padding: 50px 24px;
+	}
+
+	#experience h2 {
+		font-weight: 800;
+		font-size: clamp(45px, 10vw, 60px);
+		line-height: 56px;
+		color: #4b5c09;
+		margin-bottom: 32px;
+	}
+
+	.timeline {
+		margin-left: 0px;
+	}
+
+	.timeline h3 {
+		font-weight: 600;
+		font-size: clamp(14px, 4vw, 20px);
+		line-height: 30px;
+	}
+
+	.timeline h4 {
+		color: var(--accent-color);
+		font-weight: 400;
+		padding: 5px 0px 5px 20px;
+	}
+
+	.timeline > div::before {
+		left: 0px;
+		top: 24px;
+	}
+
+	.company-info {
+		padding-left: 25px;
+		height: 60px;
+	}
+
+	.experience-description {
+		padding-left: 20px;
+		font-size: clamp(14px, 4vw, 16px);
+		line-height: 1.5;
+	}
+}

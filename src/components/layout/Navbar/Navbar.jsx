@@ -4,7 +4,7 @@ import "./Navbar.css";
 function Navbar() {
 	const [activeSection, setActiveSection] = useState("home");
 	const [theme, setTheme] = useState(() => {
-		return localStorage.getItem("theme") || "light";
+		return localStorage.getItem("theme") || "dark";
 	});
 
 	useEffect(() => {
@@ -18,7 +18,7 @@ function Navbar() {
 
 	useEffect(() => {
 		const handleScroll = () => {
-			const sections = ["gigsection", "about", "skill", "project", "experience", "contact"];
+			const sections = ["about", "skill", "featured", "project", "experience", "contact"];
 			let current = "home";
 
 			if (window.scrollY < 100) {

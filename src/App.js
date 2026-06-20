@@ -13,7 +13,7 @@ import Projects from "./components/sections/Projects/Projects";
 import Contact from "./components/sections/Contact/Contact";
 import About from "./components/sections/About/About";
 import Footer from "./components/layout/Footer/Footer";
-import Freelance from "./components/sections/Freelance/Freelance";
+import Featured from "./components/sections/Featured/Featured";
 
 function App() {
 	return (
@@ -23,9 +23,9 @@ function App() {
 			<Navbar />
 			<main>
 				<HeroSection />
-				<Freelance />
 				<About />
 				<Skills />
+				<Featured />
 				<Projects />
 				<Experience />
 				<Contact />

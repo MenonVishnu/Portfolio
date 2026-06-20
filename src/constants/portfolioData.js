@@ -34,6 +34,11 @@ import Architecture_8 from "../assets/ProjectArchitecture/portfolio.png";
 import Architecture_9 from "../assets/ProjectArchitecture/goweather.svg";
 import Architecture_10 from "../assets/ProjectArchitecture/videoadplayer.png";
 
+// Featured Work Images
+import FeaturedImage1 from "../assets/FeaturedProjects/Wellonova1.png";
+import FeaturedImage2 from "../assets/FeaturedProjects/Wellonova2.png";
+
+
 // Experience Icons
 import JioIcon from "../assets/jio.png";
 import NJCIcon from "../assets/njc.png";
@@ -54,12 +59,56 @@ export const heroData = {
 	vectorImg: VectorImage,
 };
 
+export const taglines = [
+	{
+		role: "FRONTEND DEVELOPER",
+		tag: "Design Into Reality",
+	},
+	{
+		role: "FULL STACK DEVELOPER",
+		tag: "Ideas Into Products",
+	},
+	{
+		role: "BACKEND DEVELOPER",
+		tag: "Logic Into Solutions",
+	},
+];
+
 export const aboutData = {
+	eyebrow: "ABOUT",
+	headline: "Full-stack instincts, product-first thinking.",
 	paragraphs: [
-		"As a Computer Engineering graduate with a CGPA of 9.63, I thrive on challenges and constantly seek opportunities to grow. My journey includes leading QA teams, excelling in backend development, and contributing to high-priority projects. I’ve been recognized with the Spotlight Award for exceptional leadership and was a finalist in the ATMECS Gen AI Hackathon 2024.",
-		"With a strong skill set that includes ReactJS, GoLang, and MongoDB, combined with certifications like the Mulesoft Certified Developer and Google Go Specialization, I’m well-equipped to tackle diverse technical challenges. My projects and internships reflect my commitment to innovation and excellence."
+		"I'm Vishnu — a full-stack engineer based in India. I'm currently a founding engineer at an early-stage healthcare startup, where I own product development end-to-end: React Native on the frontend, Node.js and MongoDB underneath, real-time video consultations built on WebRTC, and AI-powered health summaries layered on top.",
+		"The part I actually care about is what happens before the code — sitting with founders while a feature is still just a sentence, and figuring out what it needs to become. I think a lot about onboarding flows that don't lose people halfway through, navigation that never deadlocks, and interfaces that feel obvious in hindsight even when they weren't."
+	],
+	stats: [
+		{ number: "2+", label: "YEARS BUILDING" },
+		{ number: "14", label: "SCREENS SHIPPED" },
+		{ number: "36", label: "PRS MERGED" }
 	]
 };
+export const featuredProjects = [
+	{
+		id: "wellonova",
+		name: "Wellonova",
+		type: "mobile",
+		status: "in-development",
+		role: "Founding Engineer",
+		tags: ["React Native", "WebRTC", "Healthcare"],
+		screenshots: [FeaturedImage1, FeaturedImage2, FeaturedImage2], // User will add screenshots here later
+		url: null,
+	},
+	{
+		id: "anagha",
+		name: "Anagha Shinde — Portfolio",
+		type: "web",
+		status: "live",
+		role: "Client Project",
+		tags: ["React", "Client Project"],
+		screenshots: [null],
+		url: "https://anaghashinde.vercel.app/",
+	},
+];
 
 export const skillsData = {
 	categories: [

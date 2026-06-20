@@ -1,21 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { heroData } from "../../../constants/portfolioData";
+import { heroData, taglines } from "../../../constants/portfolioData";
 import "./HeroSection.css";
-
-const taglines = [
-	{
-		role: "FRONTEND DEVELOPER",
-		tag: "Design Into Reality",
-	},
-	{
-		role: "FULL STACK DEVELOPER",
-		tag: "Ideas Into Products",
-	},
-	{
-		role: "BACKEND DEVELOPER",
-		tag: "Logic Into Solutions",
-	},
-];
 
 function HeroSection() {
 	const [roleIndex, setRoleIndex] = useState(0); // Start with Frontend Developer

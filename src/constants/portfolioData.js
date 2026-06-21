@@ -22,6 +22,11 @@ import Mux from "../assets/Icons/mux.png";
 import Chainlit from "../assets/Icons/chainlit.png";
 import SQLite from "../assets/Icons/sqlite.png";
 
+// Import react-icons for new Skills section
+import { FaReact, FaNodeJs, FaDocker, FaAws, FaGithub } from "react-icons/fa";
+import { FaGolang } from "react-icons/fa6";
+import { SiMongodb, SiRedis, SiWebrtc } from "react-icons/si";
+
 // Import Architecture Diagram Assets
 import Architecture_1 from "../assets/ProjectArchitecture/Ott.svg";
 import Architecture_2 from "../assets/ProjectArchitecture/tshirtstore.svg";
@@ -92,7 +97,8 @@ export const featuredProjects = [
 		id: "wellonova",
 		name: "Wellonova",
 		type: "mobile",
-		status: "in-development",
+		// status: "in-development",
+		status: "live",
 		role: "Founding Engineer",
 		tags: ["React Native", "WebRTC", "Healthcare"],
 		screenshots: [FeaturedImage1, FeaturedImage2, FeaturedImage2], // User will add screenshots here later
@@ -110,39 +116,48 @@ export const featuredProjects = [
 	},
 ];
 
-export const skillsData = {
-	categories: [
-		{
-			title: "Language/Framework",
-			skills: [
-				{ name: "Golang", level: "Advanced" },
-				{ name: "Node.js", level: "Intermediate" },
-				{ name: "Express.js", level: "Advanced" },
-				{ name: "MongoDB", level: "Advanced" },
-				{ name: "MySQL", level: "Intermediate" },
-			],
-		},
-		{
-			title: "Tools",
-			skills: [
-				{ name: "Docker", level: "Intermediate" },
-				{ name: "Redis", level: "Basic" },
-				{ name: "Github", level: "Advanced" },
-				{ name: "Microsoft Excel", level: "Advanced" },
-				{ name: "Azure DevOps", level: "Basic" },
-			],
-		},
-		{
-			title: "Soft Skills",
-			skills: [
-				{ name: "Problem Solving", level: "Expert" },
-				{ name: "Team Work", level: "Expert" },
-				{ name: "Time Management", level: "Expert" },
-				{ name: "Communication", level: "Expert" },
-			],
-		},
-	]
-};
+export const skillTrays = [
+	{
+		category: "Build",
+		subtitle: "Interfaces, mobile, motion.",
+		skills: [
+			{ name: "React", icon: FaReact, level: "daily" },
+			{ name: "React Native", icon: FaReact, level: "daily" },
+		],
+	},
+	{
+		category: "Server",
+		subtitle: "APIs, services, realtime.",
+		skills: [
+			{ name: "Node.js", icon: FaNodeJs, level: "occasional" },
+			{ name: "Go", icon: FaGolang, level: "occasional" },
+		],
+	},
+	{
+		category: "Store",
+		subtitle: "Data at rest & in flight.",
+		skills: [
+			{ name: "MongoDB", icon: SiMongodb, level: "daily" },
+			{ name: "Redis", icon: SiRedis, level: "occasional" },
+		],
+	},
+	{
+		category: "Ship",
+		subtitle: "Build, deploy, repeat.",
+		skills: [
+			{ name: "Docker", icon: FaDocker, level: "daily" },
+			{ name: "AWS", icon: FaAws, level: "occasional" },
+			{ name: "GitHub", icon: FaGithub, level: "daily" },
+		],
+	},
+	{
+		category: "Misc",
+		subtitle: "The rest of the toolkit.",
+		skills: [
+			{ name: "WebRTC", icon: SiWebrtc, level: "occasional" },
+		],
+	},
+];
 
 export const freelanceData = {
 	title: "freelance projects.",
@@ -362,28 +377,22 @@ After the URL is shortened, User can use the shortened URL to redirect it to the
 	},
 ];
 
-export const experienceData = [
+export const experience = [
 	{
-		company: "Jio Platforms Limited",
-		role: "Associate QA Engineer",
-		date: "Dec 2023 - Present",
-		icon: JioIcon,
-		points: [
-			"Directed end‑to‑end testing across multiple high‑impact projects, employing sanity, functional, regression, and performance testing to ensure exceptional product quality, reliability, and timely delivery.",
-			"Collaborated with key stakeholders, delivered actionable insights, and mentored new team members, fostering team alignment.",
-			"Earned the prestigious Spotlight Award for exceptional leadership and proactive contributions to project success."
-		]
+		title: "Founding Software Engineer",
+		company: "Healthcare Startup",
+		dateRange: "Dec 2025 — Present",
 	},
 	{
+		title: "Associate QA Engineer (Lead)",
+		company: "Jio Platforms Limited",
+		dateRange: "Dec 2023 — Present",
+	},
+	{
+		title: "Software Engineer Intern",
 		company: "NJC Labs",
-		role: "Software Developer Intern",
-		date: "Jan 2022 - Mar 2022",
-		icon: NJCIcon,
-		points: [
-			"Trained for and received the Mulesoft Certified Developer (Level ‑ 1) certificate.",
-			"Created multiple APIs using Anypoint Platform and conducted testing to ensure functionality and performance."
-		]
-	}
+		dateRange: "Jan 2022 — Mar 2022",
+	},
 ];
 
 export const contactData = {
@@ -398,3 +407,36 @@ export const contactData = {
 		githubUser: "github.com/MenonVishnu"
 	}
 };
+
+export const otherProjects = [
+	{
+		name: "cyberlocker",
+		description: "Decentralised file storage on Ethereum, with IPFS.",
+		tags: ["Solidity", "Web3.js", "IPFS"],
+		url: "https://github.com/dipeshsanil/CUB",
+	},
+	{
+		name: "video-ad-player",
+		description: "Dockerised ad platform with overlays and click tracking.",
+		tags: ["Go-Fiber", "Redis", "Docker"],
+		url: "https://github.com/MenonVishnu/Video-Ad-Player",
+	},
+	{
+		name: "go-weatherreport",
+		description: "API weather forecasting system using Redis caching, Cron daily emails, and Docker.",
+		tags: ["Golang", "Redis", "Docker"],
+		url: "https://github.com/MenonVishnu/Go-WeatherReport",
+	},
+	{
+		name: "go-urlshortner",
+		description: "High-performance URL shortener API with Redis rate limiting and Docker Compose.",
+		tags: ["Golang", "Redis", "Docker"],
+		url: "https://github.com/MenonVishnu/Go-URLShortner",
+	},
+	{
+		name: "budget-tracker-api",
+		description: "RESTful budget planner API built in GoLang using Gorilla Mux and MongoDB.",
+		tags: ["Golang", "MongoDB", "Gorilla/Mux"],
+		url: "https://github.com/MenonVishnu/BudgetApplication",
+	}
+];

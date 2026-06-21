@@ -47,7 +47,7 @@ function Navbar() {
 		<header>
 			<div className="logo italic-serif-logo">Vishnu.</div>
 			<nav className="group-1">
-				<a href="#" className={activeSection === "home" ? "active" : ""}>
+				<a href="#home" className={activeSection === "home" ? "active" : ""}>
 					Home
 				</a>
 				<a href="#about" className={activeSection === "about" ? "active" : ""}>

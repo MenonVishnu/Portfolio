@@ -1,84 +1,157 @@
-#contact {
-	padding: 100px 97px;
-	scroll-margin-top: 90px;
+/* Contact Section Styling */
+
+.contact-section {
+	width: 100%;
+	padding: 120px 6%;
+	scroll-margin-top: 80px;
+	box-sizing: border-box;
 }
 
-#contact h2 {
-	font-weight: 800;
-	font-size: 100px;
-	line-height: 116px;
-	color: var(--accent-color);
-	margin-bottom: 32px;
-}
-
-.contact-content {
-	display: flex;
-	gap: 59px;
-	margin-top: 50px;
-}
-
-.contact-info {
-	max-width: 640px;
-}
-
-#contact img {
-	max-width: 400px;
-	object-fit: contain;
-}
-
-.contact-links {
+.contact-container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
-	gap: 0;
+	align-items: flex-start;
 }
 
-.contact-links a {
+/* Eyebrow and Headline */
+.contact-eyebrow {
+	font-family: 'Inter', sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 0.2em;
+	color: var(--text-color);
+	opacity: 0.85;
+	margin-bottom: 32px;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	text-transform: uppercase;
+}
+
+.contact-eyebrow-line {
+	display: inline-block;
+	width: 32px;
+	height: 2px;
+	background-color: var(--text-color);
+	opacity: 0.85;
+}
+
+.contact-headline {
+	font-family: var(--font-serif), Georgia, serif;
+	font-size: clamp(2.8rem, 5.5vw, 4.2rem);
 	font-weight: 400;
-	font-size: 20px;
-	line-height: 44px;
+	line-height: 1.1;
+	color: var(--text-color);
+	letter-spacing: -0.02em;
+	margin-top: 0;
+	margin-bottom: 40px;
+}
+
+.contact-headline .italic-serif {
+	font-style: italic;
+	font-family: var(--font-serif), Georgia, serif;
+}
+
+/* Email Container & Interactive Link */
+.contact-email-container {
+	margin-bottom: 40px;
+}
+
+.contact-email-link {
+	font-family: var(--font-mono), monospace;
+	font-size: clamp(18px, 2.5vw, 22px);
 	color: var(--text-color);
 	text-decoration: none;
-	transition: all 0.2s ease;
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	transition: color 0.2s ease;
+	font-weight: 500;
+	border-bottom: 1.5px solid transparent;
+	padding-bottom: 4px;
 }
 
-.contact-links a:hover {
-	font-weight: 500;
-	font-size: 22px;
-	line-height: 44px;
-	color: var(--accent-color);
+.contact-email-link:hover {
+	color: #2979ff;
+	border-bottom-color: rgba(41, 121, 255, 0.4);
+}
+
+.email-arrow-icon {
+	transition: transform 0.2s ease, color 0.2s ease;
+	opacity: 0.8;
+}
+
+.contact-email-link:hover .email-arrow-icon {
+	transform: translate(3px, -3px);
+	opacity: 1;
+	color: #2979ff;
+}
+
+/* Social Buttons Row */
+.contact-socials {
+	display: flex;
+	gap: 12px;
+}
+
+.contact-socials .social-icon-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	background: transparent;
+	color: var(--text-color);
+	opacity: 0.85;
+	transition: all 0.2s ease;
 	text-decoration: none;
 }
 
-@media (max-width: 900px) {
-	#contact {
-		padding: 50px 24px;
-	}
+.contact-socials .social-icon-btn svg {
+	width: 20px;
+	height: 20px;
+	transition: transform 0.2s ease;
+}
 
-	#contact h2 {
-		font-weight: 800;
-		font-size: clamp(45px, 10vw, 60px);
-		line-height: 56px;
-		color: var(--accent-color);
+.contact-socials .social-icon-btn:hover {
+	border-color: var(--text-color);
+	background-color: rgba(0, 0, 0, 0.04);
+	color: var(--text-color);
+	opacity: 1;
+	transform: translateY(-2px);
+}
+
+body.dark-mode .contact-socials .social-icon-btn {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+body.dark-mode .contact-socials .social-icon-btn:hover {
+	border-color: #ffffff;
+	background-color: rgba(255, 255, 255, 0.08);
+	color: #ffffff;
+}
+
+/* ---- Responsive Breakpoints ---- */
+@media (max-width: 768px) {
+	.contact-section {
+		padding: 100px 6%;
+	}
+	
+	.contact-headline {
 		margin-bottom: 32px;
 	}
-
-	.contact-content {
-		flex-direction: column;
-		align-items: center;
-		margin-top: 0px;
+	
+	.contact-email-container {
+		margin-bottom: 32px;
 	}
+}
 
-	#contact img {
-		object-fit: cover;
-		width: 100%;
-		height: auto;
-	}
-
-	.contact-links a {
-		font-weight: 400;
-		font-size: 15px;
-		line-height: 28px;
-		color: var(--text-color);
-		text-decoration: none;
+@media (max-width: 480px) {
+	.contact-section {
+		padding: 80px 4%;
 	}
 }

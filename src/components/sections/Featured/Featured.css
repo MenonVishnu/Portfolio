@@ -88,7 +88,7 @@ body.dark-mode .featured-visual-container {
 .browser-frame {
 	width: 100%;
 	height: 100%;
-	border-radius: 8px;
+	border-radius: 12px;
 	border: 1px solid var(--border-color);
 	box-shadow: 0 15px 35px var(--card-shadow);
 	display: flex;
@@ -105,71 +105,7 @@ body.dark-mode .browser-frame {
 	background-color: #1a1a1a;
 }
 
-.browser-bar {
-	height: 32px;
-	background-color: #ededef;
-	border-bottom: 1px solid var(--border-color);
-	display: flex;
-	align-items: center;
-	padding: 0 14px;
-	position: relative;
-	box-sizing: border-box;
-	transition: background-color 0.3s ease, border-bottom 0.3s ease;
-}
 
-body.dark-mode .browser-bar {
-	background-color: #202022;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.browser-dots {
-	display: flex;
-	gap: 6px;
-	align-items: center;
-}
-
-.dot {
-	width: 8px;
-	height: 8px;
-	border-radius: 50%;
-}
-
-.dot-red { background-color: #ff5f56; }
-.dot-yellow { background-color: #ffbd2e; }
-.dot-green { background-color: #27c93f; }
-
-.browser-url-pill {
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	font-family: 'Inter', sans-serif;
-	font-size: 11px;
-	color: rgba(0, 0, 0, 0.45);
-	background-color: rgba(0, 0, 0, 0.04);
-	padding: 3px 20px;
-	border-radius: 12px;
-	pointer-events: none;
-	letter-spacing: 0.02em;
-	transition: color 0.3s ease, background-color 0.3s ease;
-}
-
-body.dark-mode .browser-url-pill {
-	color: rgba(255, 255, 255, 0.45);
-	background-color: rgba(255, 255, 255, 0.06);
-}
-
-.browser-content {
-	flex: 1;
-	position: relative;
-	width: 100%;
-	background-color: #eaeaea;
-	overflow: hidden;
-	transition: background-color 0.3s ease;
-}
-
-body.dark-mode .browser-content {
-	background-color: #121212;
-}
 
 .browser-screenshot {
 	width: 100%;
@@ -343,12 +279,15 @@ body.dark-mode .triptych-placeholder {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	transition: opacity 0.2s ease, transform 0.2s ease;
+	transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease;
 }
 
-.featured-link-icon:hover {
+.featured-link-icon:hover,
+.featured-title-row:hover .featured-link-icon {
 	opacity: 1;
-	transform: translate(2px, -2px);
+	color: #2979ff;
+	transform: translate(3px, -3px);
+	cursor: pointer;
 }
 
 .featured-role-label {

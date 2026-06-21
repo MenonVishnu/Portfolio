@@ -1,48 +1,95 @@
-#footer {
-	background-color: var(--accent-color);
-	color: var(--bg-color);
-	padding: 30px 97px;
-	transition: background-color 0.3s ease, color 0.3s ease;
+/* Footer Section Styling */
+
+.portfolio-footer {
+	width: 100%;
+	padding: 40px 6%;
+	border-top: 1px solid var(--border-color);
+	background-color: transparent;
+	box-sizing: border-box;
 }
 
-body.dark-mode #footer {
-	background-color: #1e293b;
-	color: #cbd5e1;
-	border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.footer-content {
-	font-size: 12px;
+.footer-container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
 	display: flex;
-	gap: 10px;
-	justify-content: flex-start;
+	justify-content: space-between;
+	align-items: center;
+	font-family: 'Inter', sans-serif;
+	font-size: 12px;
+	color: var(--text-color);
+	opacity: 0.6;
+}
+
+.footer-left {
+	display: flex;
 	flex-direction: column;
-	align-items: flex-end;
+	gap: 6px;
 }
 
-.footer-content a {
-	text-decoration: none;
-	color: var(--btn-bg);
+.footer-copyright {
 	font-weight: 500;
-	transition: color 0.2s ease;
 }
 
-.footer-content a:hover {
-	color: var(--accent-color);
-	filter: brightness(1.2);
+.footer-build {
+	font-family: var(--font-mono), monospace;
+	font-size: 11px;
+	opacity: 0.8;
 }
 
-@media (max-width: 900px) {
-	#footer {
-		padding: 30px 24px;
+.footer-right {
+	display: flex;
+	align-items: center;
+}
+
+.footer-credits {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.credits-label {
+	margin-right: 4px;
+	opacity: 0.7;
+}
+
+.credits-dot {
+	opacity: 0.3;
+}
+
+.footer-credits a {
+	color: var(--text-color);
+	text-decoration: none;
+	font-weight: 500;
+	transition: color 0.2s ease, opacity 0.2s ease;
+	opacity: 0.8;
+}
+
+.footer-credits a:hover {
+	color: #2979ff;
+	opacity: 1;
+}
+
+/* ---- Responsive Breakpoints ---- */
+@media (max-width: 768px) {
+	.portfolio-footer {
+		padding: 30px 6%;
 	}
 
-	.footer-content {
-		font-size: 12px;
-		display: flex;
-		gap: 10px;
-		justify-content: center;
+	.footer-container {
 		flex-direction: column;
 		align-items: center;
+		text-align: center;
+		gap: 16px;
+	}
+
+	.footer-left {
+		align-items: center;
+	}
+}
+
+@media (max-width: 480px) {
+	.portfolio-footer {
+		padding: 24px 4%;
 	}
 }

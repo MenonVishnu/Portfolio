@@ -1,35 +1,42 @@
 import React from "react";
-import { experienceData } from "../../../constants/portfolioData";
+import { experience } from "../../../constants/portfolioData";
 import "./Experience.css";
 
 function Experience() {
 	return (
-		<section id="experience">
-			<h2>experience.</h2>
-			<p className="description">
-				I bring expertise in QA leadership, backend development, and API
-				creation, with experience at Jio Platforms and NJC Labs. My journey
-				includes leading testing for high-impact projects, mentoring team
-				members, and earning accolades like the Spotlight Award. I thrive in
-				collaborative environments, delivering innovative and high-quality
-				solutions.
-			</p>
-
-			<div className="timeline">
-				{experienceData.map((exp, idx) => (
-					<div className={`group-${idx + 2}`} key={idx}>
-						<div className="company-info">
-							<img src={exp.icon} className="company-icons" alt={exp.company} />
-							<h3>{exp.company} - {exp.role}</h3>
-						</div>
-						<h4>{exp.date}</h4>
-						<ul className="experience-description">
-							{exp.points.map((pt, pIdx) => (
-								<li key={pIdx}>{pt}</li>
-							))}
-						</ul>
+		<section id="experience" className="experience-section">
+			<div className="experience-container">
+				{/* Section Header */}
+				<div className="experience-header">
+					<div className="experience-eyebrow">
+						<span className="experience-eyebrow-line"></span>
+						EXPERIENCE
 					</div>
-				))}
+					<h2 className="experience-headline">
+						Places I have <span className="italic-serif">helped build.</span>
+					</h2>
+				</div>
+
+				{/* List Container with top border */}
+				<div className="experience-list">
+					{experience.map((role, idx) => (
+						<div className="experience-row" key={idx}>
+							{/* Column 1: Date Range */}
+							<div className="experience-date-col">{role.dateRange}</div>
+
+							{/* Column 2: Title and Company */}
+							<div className="experience-info-col">
+								<h3 className="role-title">{role.title}</h3>
+								<div className="role-company">{role.company}</div>
+							</div>
+
+							{/* Column 3: Muted Index Number */}
+							<div className="experience-index-col">
+								{String(idx + 1).padStart(2, "0")}
+							</div>
+						</div>
+					))}
+				</div>
 			</div>
 		</section>
 	);

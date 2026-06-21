@@ -8,38 +8,26 @@ function FeaturedCard({ project }) {
 			<div className="featured-visual-container">
 				{project.type === "web" ? (
 					<div className="browser-frame">
-						<div className="browser-bar">
-							<div className="browser-dots">
-								<span className="dot dot-red"></span>
-								<span className="dot dot-yellow"></span>
-								<span className="dot dot-green"></span>
-							</div>
-							<div className="browser-url-pill">
-								{project.url ? project.url.replace(/^https?:\/\//, "") : ""}
-							</div>
-						</div>
-						<div className="browser-content">
-							{project.screenshots[0] ? (
-								<img
-									src={project.screenshots[0]}
-									alt={project.name}
-									className="browser-screenshot"
-								/>
-							) : (
-								<div className="browser-placeholder">
-									<div className="placeholder-logo">
-										<svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" strokeWidth="1.5">
-											<rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-											<line x1="8" y1="21" x2="16" y2="21" />
-											<line x1="12" y1="17" x2="12" y2="21" />
-										</svg>
-									</div>
-									<span className="placeholder-text">
-										{project.url ? project.url.replace(/^https?:\/\//, "") : ""}
-									</span>
+						{project.screenshots[0] ? (
+							<img
+								src={project.screenshots[0]}
+								alt={project.name}
+								className="browser-screenshot"
+							/>
+						) : (
+							<div className="browser-placeholder">
+								<div className="placeholder-logo">
+									<svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" strokeWidth="1.5">
+										<rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+										<line x1="8" y1="21" x2="16" y2="21" />
+										<line x1="12" y1="17" x2="12" y2="21" />
+									</svg>
 								</div>
-							)}
-						</div>
+								<span className="placeholder-text">
+									{project.url ? project.url.replace(/^https?:\/\//, "") : ""}
+								</span>
+							</div>
+						)}
 					</div>
 				) : (
 					/* Mobile Triptych Panels Layout */

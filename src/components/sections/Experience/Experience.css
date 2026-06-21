@@ -1,124 +1,143 @@
-#experience {
-	padding: 100px 97px;
-	scroll-margin-top: 90px;
+/* Experience Section Styling */
+
+.experience-section {
+	width: 100%;
+	padding: 100px 6%;
+	scroll-margin-top: 80px;
+	box-sizing: border-box;
 }
 
-#experience h2 {
-	font-weight: 800;
-	font-size: 100px;
-	line-height: 116px;
-	color: var(--accent-color);
-	margin-bottom: 32px;
+.experience-container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
-.timeline {
-	margin-top: 40px;
-	margin-left: 287px;
+/* Eyebrow and Headline */
+.experience-eyebrow {
+	font-family: 'Inter', sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 0.2em;
+	color: var(--text-color);
+	opacity: 0.85;
+	margin-bottom: 24px;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	text-transform: uppercase;
 }
 
-.timeline > div {
-	position: relative;
+.experience-eyebrow-line {
+	display: inline-block;
+	width: 32px;
+	height: 2px;
+	background-color: var(--text-color);
+	opacity: 0.85;
+}
+
+.experience-headline {
+	font-family: var(--font-serif), Georgia, serif;
+	font-size: clamp(2.0rem, 3.5vw, 3.2rem);
+	font-weight: 400;
+	line-height: 1.2;
+	color: var(--text-color);
+	letter-spacing: -0.01em;
 	margin-bottom: 50px;
 }
 
-.timeline > div::before {
-	content: "";
-	position: absolute;
-	left: -31px;
-	top: 13px;
-	width: 13px;
-	height: 13px;
-	background: var(--timeline-dot);
-	border-radius: 50%;
-	transition: background-color 0.3s ease;
+.experience-headline .italic-serif {
+	font-style: italic;
+	font-family: var(--font-serif), Georgia, serif;
 }
 
-.timeline h3 {
-	font-weight: 600;
-	font-size: 24px;
-	line-height: 40px;
-	color: var(--text-color);
+/* Container with top border */
+.experience-list {
+	border-top: 1px solid var(--border-color);
+	width: 100%;
 }
 
-.company-icons {
-	width: 27px;
-	height: 27px;
-	border-radius: 50%;
-}
-
-.company-info {
+/* Experience row using a 3-column layout */
+.experience-row {
 	display: flex;
 	align-items: center;
-	gap: 10px;
+	padding: 22px 0;
+	border-bottom: 1px solid var(--border-color);
+	box-sizing: border-box;
 }
 
-.experience-description {
-	padding-left: 20px;
-	font-size: 20px;
-	line-height: 30px;
-	max-width: 900px;
+/* Column 1: Date Range (fixed width) */
+.experience-date-col {
+	width: 130px;
+	flex-shrink: 0;
+	font-family: var(--font-mono), monospace;
+	font-size: 11px;
 	color: var(--text-color);
+	opacity: 0.45;
+	letter-spacing: 0.02em;
 }
 
-.experience-description li {
-	margin-bottom: 10px;
+/* Column 2: Info column (flexible width) */
+.experience-info-col {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
 }
 
-.timeline h4 {
-	color: var(--accent-color);
+.role-title {
+	font-family: var(--font-serif), Georgia, serif;
+	font-size: 18px;
 	font-weight: 400;
-	margin-bottom: 12px;
+	color: var(--text-color);
+	margin: 0;
+	letter-spacing: -0.01em;
 }
 
-.timeline p {
-	font-weight: 400;
-	font-size: 24px;
-	line-height: 44px;
-	max-width: 900px;
+.role-company {
+	font-family: 'Inter', sans-serif;
+	font-size: 12px;
+	color: var(--text-color);
+	opacity: 0.65;
 }
 
-@media (max-width: 900px) {
-	#experience {
-		padding: 50px 24px;
+/* Column 3: Index column (auto width, right-aligned) */
+.experience-index-col {
+	font-family: monospace;
+	font-size: 11px;
+	color: var(--text-color);
+	opacity: 0.35;
+	text-align: right;
+	user-select: none;
+	width: 30px;
+	flex-shrink: 0;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+	.experience-section {
+		padding: 80px 6%;
 	}
 
-	#experience h2 {
-		font-weight: 800;
-		font-size: clamp(45px, 10vw, 60px);
-		line-height: 56px;
-		color: #4b5c09;
-		margin-bottom: 32px;
+	.experience-row {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 8px;
+		padding: 18px 0;
 	}
 
-	.timeline {
-		margin-left: 0px;
+	.experience-date-col {
+		width: 100%;
+		margin-bottom: 2px;
 	}
 
-	.timeline h3 {
-		font-weight: 600;
-		font-size: clamp(14px, 4vw, 20px);
-		line-height: 30px;
+	.experience-index-col {
+		display: none;
 	}
+}
 
-	.timeline h4 {
-		color: var(--accent-color);
-		font-weight: 400;
-		padding: 5px 0px 5px 20px;
-	}
-
-	.timeline > div::before {
-		left: 0px;
-		top: 24px;
-	}
-
-	.company-info {
-		padding-left: 25px;
-		height: 60px;
-	}
-
-	.experience-description {
-		padding-left: 20px;
-		font-size: clamp(14px, 4vw, 16px);
-		line-height: 1.5;
+@media (max-width: 480px) {
+	.experience-section {
+		padding: 60px 4%;
 	}
 }

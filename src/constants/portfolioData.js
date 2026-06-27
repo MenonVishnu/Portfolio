@@ -24,6 +24,7 @@ import SQLite from "../assets/Icons/sqlite.png";
 
 // Import react-icons for new Skills section
 import { FaReact, FaNodeJs, FaDocker, FaAws, FaGithub } from "react-icons/fa";
+import { VscVscode } from "react-icons/vsc";
 import { FaGolang } from "react-icons/fa6";
 import { SiMongodb, SiRedis, SiWebrtc } from "react-icons/si";
 
@@ -43,7 +44,6 @@ import Architecture_10 from "../assets/ProjectArchitecture/videoadplayer.png";
 import FeaturedImage1 from "../assets/FeaturedProjects/Wellonova1.png";
 import FeaturedImage2 from "../assets/FeaturedProjects/Wellonova2.png";
 
-
 // Experience Icons
 import JioIcon from "../assets/jio.png";
 import NJCIcon from "../assets/njc.png";
@@ -59,7 +59,8 @@ export const heroData = {
 	greeting: "Hello, I'm Vishnu,",
 	title: "Full Stack Developer",
 	location: "based in India.",
-	resumeLink: "https://drive.google.com/file/d/1X274m3tBNQjwGPBmNvn90OXebVl3GRIJ/view?usp=sharing",
+	resumeLink:
+		"https://drive.google.com/file/d/10pMlHQcfyvljnuq8u6hE_ZSeiN_K-mRf/view?usp=sharing",
 	profileImg: ProfileImage,
 	vectorImg: VectorImage,
 };
@@ -83,22 +84,22 @@ export const aboutData = {
 	eyebrow: "ABOUT",
 	headline: "Full-stack instincts, product-first thinking.",
 	paragraphs: [
-		"I'm Vishnu — a full-stack engineer based in India. I'm currently a founding engineer at an early-stage healthcare startup, where I own product development end-to-end: React Native on the frontend, Node.js and MongoDB underneath, real-time video consultations built on WebRTC, and AI-powered health summaries layered on top.",
-		"The part I actually care about is what happens before the code — sitting with founders while a feature is still just a sentence, and figuring out what it needs to become. I think a lot about onboarding flows that don't lose people halfway through, navigation that never deadlocks, and interfaces that feel obvious in hindsight even when they weren't."
+		"I'm a Full-Stack Engineer passionate about building products that solve real-world problems. As a Founding Software Engineer at an early-stage healthcare startup, I've worked across frontend, backend, cloud infrastructure, and AI-powered features, taking ideas from concept to production in a fast-paced environment.",
+		"I enjoy owning the entire development process, from designing intuitive user experiences and building scalable APIs to deploying applications on AWS. I'm always eager to learn, tackle challenging problems, and build software that creates meaningful impact.",
 	],
 	stats: [
 		{ number: "2+", label: "YEARS BUILDING" },
 		{ number: "14", label: "SCREENS SHIPPED" },
-		{ number: "36", label: "PRS MERGED" }
-	]
+		{ number: "36", label: "PRS MERGED" },
+	],
 };
 export const featuredProjects = [
 	{
 		id: "wellonova",
 		name: "Wellonova",
 		type: "mobile",
-		// status: "in-development",
-		status: "live",
+		status: "in-development",
+		// status: "live",
 		role: "Founding Engineer",
 		tags: ["React Native", "WebRTC", "Healthcare"],
 		screenshots: [FeaturedImage1, FeaturedImage2, FeaturedImage2], // User will add screenshots here later
@@ -153,44 +154,48 @@ export const skillTrays = [
 	{
 		category: "Misc",
 		subtitle: "The rest of the toolkit.",
-		skills: [
-			{ name: "WebRTC", icon: SiWebrtc, level: "occasional" },
+		skills: [{ name: "WebRTC", icon: SiWebrtc, level: "occasional" },
+		{name: "Antigravity", icon: VscVscode, level: "daily" }
 		],
 	},
 ];
 
 export const freelanceData = {
 	title: "freelance projects.",
-	description: "Successfully built and deployed production-grade applications for independent clients. Focused on reliable service architectures, frontend visual excellence, and modern integration workflows.",
+	description:
+		"Successfully built and deployed production-grade applications for independent clients. Focused on reliable service architectures, frontend visual excellence, and modern integration workflows.",
 	gigs: [
 		{
 			id: 1,
 			title: "Backend Scalability Solutions",
 			date: "Nov 2024",
 			badge: "GoLang Backend",
-			description: "A comprehensive backend application built with GoLang and MongoDB, focusing on high scalability, robust concurrency routing, and API performance.",
+			description:
+				"A comprehensive backend application built with GoLang and MongoDB, focusing on high scalability, robust concurrency routing, and API performance.",
 			tech: ["Golang", "MongoDB", "REST API", "Docker"],
-			image: ProjImage1
+			image: ProjImage1,
 		},
 		{
 			id: 2,
 			title: "Dynamic Frontend Dashboard",
 			date: "Dec 2024",
 			badge: "React Application",
-			description: "A dynamic and responsive frontend dashboard implemented with ReactJS, featuring real-time state visualization, interactive UI modules, and glassmorphic designs.",
+			description:
+				"A dynamic and responsive frontend dashboard implemented with ReactJS, featuring real-time state visualization, interactive UI modules, and glassmorphic designs.",
 			tech: ["React.js", "CSS Grid", "ChartJS", "Framer Motion"],
-			image: ProjImage2
+			image: ProjImage2,
 		},
 		{
 			id: 3,
 			title: "Full-Stack Integration Platform",
 			date: "Feb 2025",
 			badge: "Full-Stack System",
-			description: "An innovative full-stack platform integrating intelligent APIs for automated analysis, structured data parsing, and streamlined client workflows.",
+			description:
+				"An innovative full-stack platform integrating intelligent APIs for automated analysis, structured data parsing, and streamlined client workflows.",
 			tech: ["Node.js", "React.js", "Express.js", "REST APIs"],
-			image: ProjectDemo
-		}
-	]
+			image: ProjectDemo,
+		},
+	],
 };
 
 export const projectsData = [
@@ -397,15 +402,16 @@ export const experience = [
 
 export const contactData = {
 	title: "contact.",
-	description: "Feel free to reach out for collaboration, inquiries, or opportunities to create impactful and innovative solutions together!",
+	description:
+		"Feel free to reach out for collaboration, inquiries, or opportunities to create impactful and innovative solutions together!",
 	image: ContactImage,
 	links: {
 		email: "menonvishnu26@gmail.com",
 		linkedin: "https://www.linkedin.com/in/menonvishnu01/",
 		linkedinUser: "linkedin.com/menonvishnu",
 		github: "https://github.com/MenonVishnu",
-		githubUser: "github.com/MenonVishnu"
-	}
+		githubUser: "github.com/MenonVishnu",
+	},
 };
 
 export const otherProjects = [
@@ -423,20 +429,23 @@ export const otherProjects = [
 	},
 	{
 		name: "go-weatherreport",
-		description: "API weather forecasting system using Redis caching, Cron daily emails, and Docker.",
+		description:
+			"API weather forecasting system using Redis caching, Cron daily emails, and Docker.",
 		tags: ["Golang", "Redis", "Docker"],
 		url: "https://github.com/MenonVishnu/Go-WeatherReport",
 	},
 	{
 		name: "go-urlshortner",
-		description: "High-performance URL shortener API with Redis rate limiting and Docker Compose.",
+		description:
+			"High-performance URL shortener API with Redis rate limiting and Docker Compose.",
 		tags: ["Golang", "Redis", "Docker"],
 		url: "https://github.com/MenonVishnu/Go-URLShortner",
 	},
 	{
 		name: "budget-tracker-api",
-		description: "RESTful budget planner API built in GoLang using Gorilla Mux and MongoDB.",
+		description:
+			"RESTful budget planner API built in GoLang using Gorilla Mux and MongoDB.",
 		tags: ["Golang", "MongoDB", "Gorilla/Mux"],
 		url: "https://github.com/MenonVishnu/BudgetApplication",
-	}
+	},
 ];

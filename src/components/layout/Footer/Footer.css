@@ -1,0 +1,95 @@
+/* Footer Section Styling */
+
+.portfolio-footer {
+	width: 100%;
+	padding: 40px 6%;
+	border-top: 1px solid var(--border-color);
+	background-color: transparent;
+	box-sizing: border-box;
+}
+
+.footer-container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-family: 'Inter', sans-serif;
+	font-size: 12px;
+	color: var(--text-color);
+	opacity: 0.6;
+}
+
+.footer-left {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.footer-copyright {
+	font-weight: 500;
+}
+
+.footer-build {
+	font-family: var(--font-mono), monospace;
+	font-size: 11px;
+	opacity: 0.8;
+}
+
+.footer-right {
+	display: flex;
+	align-items: center;
+}
+
+.footer-credits {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.credits-label {
+	margin-right: 4px;
+	opacity: 0.7;
+}
+
+.credits-dot {
+	opacity: 0.3;
+}
+
+.footer-credits a {
+	color: var(--text-color);
+	text-decoration: none;
+	font-weight: 500;
+	transition: color 0.2s ease, opacity 0.2s ease;
+	opacity: 0.8;
+}
+
+.footer-credits a:hover {
+	color: #2979ff;
+	opacity: 1;
+}
+
+/* ---- Responsive Breakpoints ---- */
+@media (max-width: 768px) {
+	.portfolio-footer {
+		padding: 30px 6%;
+	}
+
+	.footer-container {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: 16px;
+	}
+
+	.footer-left {
+		align-items: center;
+	}
+}
+
+@media (max-width: 480px) {
+	.portfolio-footer {
+		padding: 24px 4%;
+	}
+}

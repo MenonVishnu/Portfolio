@@ -1,0 +1,143 @@
+/* Experience Section Styling */
+
+.experience-section {
+	width: 100%;
+	padding: 100px 6%;
+	scroll-margin-top: 80px;
+	box-sizing: border-box;
+}
+
+.experience-container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* Eyebrow and Headline */
+.experience-eyebrow {
+	font-family: 'Inter', sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 0.2em;
+	color: var(--text-color);
+	opacity: 0.85;
+	margin-bottom: 24px;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	text-transform: uppercase;
+}
+
+.experience-eyebrow-line {
+	display: inline-block;
+	width: 32px;
+	height: 2px;
+	background-color: var(--text-color);
+	opacity: 0.85;
+}
+
+.experience-headline {
+	font-family: var(--font-serif), Georgia, serif;
+	font-size: clamp(2.0rem, 3.5vw, 3.2rem);
+	font-weight: 400;
+	line-height: 1.2;
+	color: var(--text-color);
+	letter-spacing: -0.01em;
+	margin-bottom: 50px;
+}
+
+.experience-headline .italic-serif {
+	font-style: italic;
+	font-family: var(--font-serif), Georgia, serif;
+}
+
+/* Container with top border */
+.experience-list {
+	border-top: 1px solid var(--border-color);
+	width: 100%;
+}
+
+/* Experience row using a 3-column layout */
+.experience-row {
+	display: flex;
+	align-items: center;
+	padding: 22px 0;
+	border-bottom: 1px solid var(--border-color);
+	box-sizing: border-box;
+}
+
+/* Column 1: Date Range (fixed width) */
+.experience-date-col {
+	width: 130px;
+	flex-shrink: 0;
+	font-family: var(--font-mono), monospace;
+	font-size: 11px;
+	color: var(--text-color);
+	opacity: 0.45;
+	letter-spacing: 0.02em;
+}
+
+/* Column 2: Info column (flexible width) */
+.experience-info-col {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.role-title {
+	font-family: var(--font-serif), Georgia, serif;
+	font-size: 18px;
+	font-weight: 400;
+	color: var(--text-color);
+	margin: 0;
+	letter-spacing: -0.01em;
+}
+
+.role-company {
+	font-family: 'Inter', sans-serif;
+	font-size: 12px;
+	color: var(--text-color);
+	opacity: 0.65;
+}
+
+/* Column 3: Index column (auto width, right-aligned) */
+.experience-index-col {
+	font-family: monospace;
+	font-size: 11px;
+	color: var(--text-color);
+	opacity: 0.35;
+	text-align: right;
+	user-select: none;
+	width: 30px;
+	flex-shrink: 0;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+	.experience-section {
+		padding: 80px 6%;
+	}
+
+	.experience-row {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 8px;
+		padding: 18px 0;
+	}
+
+	.experience-date-col {
+		width: 100%;
+		margin-bottom: 2px;
+	}
+
+	.experience-index-col {
+		display: none;
+	}
+}
+
+@media (max-width: 480px) {
+	.experience-section {
+		padding: 60px 4%;
+	}
+}

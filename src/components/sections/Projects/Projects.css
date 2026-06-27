@@ -1,0 +1,383 @@
+/* Projects / Other Work Section Styling */
+
+.projects-section {
+	width: 100%;
+	padding: 100px 6%;
+	scroll-margin-top: 80px;
+	box-sizing: border-box;
+}
+
+.projects-container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* Eyebrow and Headline */
+.projects-eyebrow {
+	font-family: 'Inter', sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 0.2em;
+	color: var(--text-color);
+	opacity: 0.85;
+	margin-bottom: 24px;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	text-transform: uppercase;
+}
+
+.projects-eyebrow-line {
+	display: inline-block;
+	width: 32px;
+	height: 2px;
+	background-color: var(--text-color);
+	opacity: 0.85;
+}
+
+.projects-headline {
+	font-family: var(--font-serif), Georgia, serif;
+	font-size: clamp(2.0rem, 3.5vw, 3.2rem);
+	font-weight: 400;
+	line-height: 1.2;
+	color: var(--text-color);
+	letter-spacing: -0.01em;
+	margin-bottom: 50px;
+}
+
+.projects-headline .italic-serif {
+	font-style: italic;
+	font-family: var(--font-serif), Georgia, serif;
+}
+
+/* Adaptive Terminal Theme variables */
+.terminal-container {
+	--term-bg: #f4f4f6;
+	--term-header-bg: #eaebee;
+	--term-border: rgba(0, 0, 0, 0.08);
+	--term-text: #27272a;
+	--term-cmd: #71717a;
+	--term-path-color: #71717a;
+	--term-perms: rgba(0, 0, 0, 0.35);
+	--term-name: #09090b;
+	--term-git-link: rgba(0, 0, 0, 0.5);
+	--term-git-hover: #09090b;
+	--term-desc: #3f3f46;
+	--term-divider: rgba(0, 0, 0, 0.06);
+	--term-prompt: #16a34a;
+
+	/* Tag tints - Light Theme */
+	--tint-0-bg: rgba(59, 130, 246, 0.08);
+	--tint-0-text: #2563eb;
+	--tint-1-bg: rgba(13, 148, 136, 0.08);
+	--tint-1-text: #0d9488;
+	--tint-2-bg: rgba(147, 51, 234, 0.08);
+	--tint-2-text: #9333ea;
+	--tint-3-bg: rgba(217, 119, 6, 0.08);
+	--tint-3-text: #d97706;
+
+	width: 100%;
+	background-color: var(--term-bg);
+	border: 1px solid var(--term-border);
+	border-radius: 10px;
+	box-shadow: 0 15px 35px var(--card-shadow);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+body.dark-mode .terminal-container {
+	--term-bg: #111113;
+	--term-header-bg: #161618;
+	--term-border: rgba(255, 255, 255, 0.12);
+	--term-text: #e4e4e7;
+	--term-cmd: #9ca3af;
+	--term-path-color: rgba(255, 255, 255, 0.45);
+	--term-perms: rgba(255, 255, 255, 0.25);
+	--term-name: #ffffff;
+	--term-git-link: rgba(255, 255, 255, 0.4);
+	--term-git-hover: #ffffff;
+	--term-desc: rgba(255, 255, 255, 0.7);
+	--term-divider: rgba(255, 255, 255, 0.08);
+	--term-prompt: #4ade80;
+
+	/* Tag tints - Dark Theme */
+	--tint-0-bg: rgba(59, 130, 246, 0.12);
+	--tint-0-text: #93c5fd;
+	--tint-1-bg: rgba(20, 184, 166, 0.12);
+	--tint-1-text: #99f6e4;
+	--tint-2-bg: rgba(168, 85, 247, 0.12);
+	--tint-2-text: #e9d5ff;
+	--tint-3-bg: rgba(245, 158, 11, 0.12);
+	--tint-3-text: #fde68a;
+}
+
+/* Terminal Top Bar */
+.terminal-header {
+	height: 38px;
+	background-color: var(--term-header-bg);
+	border-bottom: 1px solid var(--term-border);
+	display: flex;
+	align-items: center;
+	padding: 0 16px;
+	position: relative;
+	box-sizing: border-box;
+	transition: background-color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.terminal-dots {
+	display: flex;
+	gap: 6px;
+	align-items: center;
+}
+
+.terminal-dot {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+.term-red { background-color: #ff5f56; }
+.term-yellow { background-color: #ffbd2e; }
+.term-green { background-color: #27c93f; }
+
+.terminal-path {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 12px;
+	color: var(--term-path-color);
+	letter-spacing: 0.02em;
+	pointer-events: none;
+	transition: color 0.3s ease;
+}
+
+/* Terminal Content Area */
+.terminal-body {
+	padding: 24px;
+	box-sizing: border-box;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 14px;
+	line-height: 1.6;
+	color: var(--term-text);
+	transition: color 0.3s ease;
+}
+
+/* Prompt Line */
+.terminal-prompt-line {
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+
+.prompt-dollar {
+	color: var(--term-prompt);
+	margin-right: 8px;
+	transition: color 0.3s ease;
+}
+
+.prompt-cmd {
+	color: var(--term-cmd);
+	transition: color 0.3s ease;
+}
+
+/* Projects List inside Terminal */
+.terminal-projects-list {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.terminal-project-block {
+	padding: 20px 0;
+	border-bottom: 1px solid var(--term-divider);
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	transition: border-bottom 0.3s ease;
+}
+
+.terminal-project-block:last-child {
+	border-bottom: none;
+	padding-bottom: 12px;
+}
+
+.terminal-project-block:first-child {
+	padding-top: 0;
+}
+
+/* Directory listing line */
+.terminal-dir-line {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.dir-left {
+	display: flex;
+	gap: 16px;
+}
+
+.dir-perms {
+	color: var(--term-perms);
+	user-select: none;
+	transition: color 0.3s ease;
+}
+
+.dir-name {
+	color: var(--term-name);
+	font-weight: bold;
+	transition: color 0.3s ease;
+}
+
+/* Github link */
+.dir-github-link {
+	color: var(--term-git-link);
+	text-decoration: none;
+	font-size: 13px;
+	transition: color 0.2s ease;
+}
+
+.dir-github-link:hover {
+	color: var(--term-git-hover);
+	text-decoration: underline;
+}
+
+/* Project Description */
+.terminal-project-desc {
+	font-family: 'Inter', sans-serif;
+	font-size: 13.5px;
+	line-height: 1.5;
+	color: var(--term-desc);
+	max-width: 800px;
+	transition: color 0.3s ease;
+}
+
+/* Tags badges */
+.terminal-project-tags {
+	display: flex;
+	gap: 8px;
+	flex-wrap: wrap;
+	margin-top: 4px;
+}
+
+.terminal-tag {
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 11px;
+	font-weight: bold;
+	padding: 2px 8px;
+	border-radius: 4px;
+	text-transform: uppercase;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tag-tint-0 {
+	background-color: var(--tint-0-bg);
+	color: var(--tint-0-text);
+}
+
+.tag-tint-1 {
+	background-color: var(--tint-1-bg);
+	color: var(--tint-1-text);
+}
+
+.tag-tint-2 {
+	background-color: var(--tint-2-bg);
+	color: var(--tint-2-text);
+}
+
+.tag-tint-3 {
+	background-color: var(--tint-3-bg);
+	color: var(--tint-3-text);
+}
+
+/* Closing Prompt & Blinking Cursor */
+.closing-prompt {
+	margin-top: 20px;
+	margin-bottom: 0;
+	display: flex;
+	align-items: center;
+}
+
+.terminal-cursor {
+	display: inline-block;
+	width: 8px;
+	height: 15px;
+	background-color: var(--term-prompt);
+	margin-left: 2px;
+	animation: blink 1s step-end infinite;
+	transition: background-color 0.3s ease;
+}
+
+@keyframes blink {
+	0%, 100% { opacity: 1; }
+	50% { opacity: 0; }
+}
+
+/* Footer caption below the terminal */
+.terminal-caption {
+	margin-top: 16px;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 12px;
+	color: var(--text-color);
+	opacity: 0.55;
+	transition: opacity 0.3s ease;
+}
+
+.caption-link {
+	color: var(--text-color);
+	text-decoration: underline;
+	transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.caption-link:hover {
+	opacity: 1;
+	color: #2979ff;
+}
+
+/* ---- Responsive Styles ---- */
+@media (max-width: 900px) {
+	.projects-section {
+		padding: 80px 6%;
+	}
+	
+	.terminal-body {
+		padding: 18px;
+	}
+	
+	.dir-left {
+		gap: 8px;
+	}
+	
+	.dir-perms {
+		display: none;
+	}
+}
+
+@media (max-width: 480px) {
+	.projects-section {
+		padding: 60px 4%;
+	}
+	
+	.terminal-header {
+		padding: 0 12px;
+	}
+	
+	.terminal-path {
+		display: none;
+	}
+	
+	.terminal-dir-line {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 4px;
+	}
+	
+	.dir-github-link {
+		font-size: 12px;
+	}
+}

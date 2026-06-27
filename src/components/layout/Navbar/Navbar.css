@@ -1,0 +1,109 @@
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	padding: 15px 97px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: var(--bg-color); /* Same as body background */
+	border-bottom: 1px solid var(--border-color); /* Subtle border */
+	backdrop-filter: blur(5px);
+	transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.logo {
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 36px;
+	color: var(--logo-color);
+}
+
+nav {
+	display: flex;
+	gap: 45px;
+}
+
+nav a {
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 27px;
+	text-decoration: none;
+	color: var(--text-color);
+	opacity: 0.55;
+	transition: opacity 0.25s ease;
+}
+
+nav a:hover {
+	opacity: 0.95;
+}
+
+nav a.active {
+	font-weight: 500;
+	opacity: 1;
+}
+
+.italic-serif-logo {
+	font-family: var(--font-serif), Georgia, serif;
+	font-style: italic;
+	font-weight: 700;
+}
+
+.nav-right {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.theme-toggle-btn {
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s;
+	color: var(--text-color);
+}
+
+.theme-toggle-btn:hover {
+	background-color: var(--border-color);
+	transform: rotate(15deg);
+}
+
+.lets-talk-btn {
+	background-color: var(--text-color);
+	color: var(--bg-color);
+	padding: 10px 24px;
+	border-radius: 9999px;
+	font-family: 'Inter', sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+	text-decoration: none;
+	transition: transform 0.2s ease, opacity 0.2s ease, background-color 0.3s;
+	display: inline-block;
+}
+
+.lets-talk-btn:hover {
+	transform: translateY(-1px);
+	opacity: 0.95;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+body.dark-mode .lets-talk-btn:hover {
+	box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 900px) {
+	header {
+		padding: 15px 24px;
+	}
+	nav {
+		gap: 15px;
+	}
+}

@@ -1,0 +1,248 @@
+.popup-overlay {
+	z-index: 1050 !important;
+}
+
+.modal-container {
+	position: relative;
+	padding: 10px 10px 30px 10px;
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	border: 1px solid var(--border-color);
+	opacity: 0.98;
+	border-radius: 15px;
+	box-shadow: 0px 10px 30px var(--card-shadow);
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.modal-container::-webkit-scrollbar {
+	width: 2px !important;
+}
+
+.popup-content {
+	opacity: 1;
+	transform: scale(0.7);
+	animation: scaleIn 0.3s ease-out forwards;
+}
+
+.modal-inside-container {
+	width: 90vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.x-button {
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	padding: 0;
+	font-weight: 500;
+	height: 36px;
+	width: 36px;
+	font-size: 24px;
+	line-height: 1;
+	border-radius: 50%;
+	cursor: pointer;
+	color: var(--text-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: none;
+	text-align: center;
+	font-family: Arial, sans-serif;
+	transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.x-button:hover {
+	color: var(--accent-color);
+	transform: scale(1.1);
+}
+
+.modal-title {
+	font-weight: 800;
+	font-size: 50px;
+	line-height: 70px;
+	color: var(--accent-color);
+	margin-bottom: 20px;
+}
+
+.content-container {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.architecture {
+	border-radius: 8px;
+	opacity: 1;
+	width: 500px;
+	box-shadow: 0px 4px 12px var(--card-shadow);
+}
+
+.left {
+	display: flex;
+	align-items: center;
+}
+
+.center {
+	margin: 0px 5px 0px 5px;
+	width: 3px;
+	height: 65vh;
+	background-color: var(--accent-color);
+}
+
+.right {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 500px;
+}
+
+.modal-description {
+	margin: 0px 0px 20px 0px;
+	font-size: 15px;
+	line-height: 20px;
+	color: var(--text-color);
+	opacity: 0.9;
+}
+
+.section-title {
+	margin-bottom: 15px;
+	color: var(--accent-color);
+}
+
+.tech-stack {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 10px;
+	margin-bottom: 20px;
+}
+
+.tech {
+	border-radius: 8px;
+	padding: 10px;
+	color: var(--btn-text);
+	background: var(--btn-bg);
+	border: 1px solid var(--border-color);
+	box-shadow: 0px 2px 6px var(--card-shadow);
+	display: flex;
+	justify-content: center;
+	font-weight: 500;
+	font-size: 13px;
+}
+
+.links {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+}
+
+.link {
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: start;
+	align-items: center;
+}
+
+.github-link {
+	height: 30px;
+	line-height: 27px;
+	padding: 0px 10px;
+	border-radius: 6px;
+	transition: transform 0.3s ease-in-out;
+}
+
+body.dark-mode .github-link {
+	filter: invert(1);
+}
+
+.github-link:hover {
+	transform: scale(1.2);
+}
+
+.span-2 {
+	grid-column: span 2;
+}
+
+.button {
+	width: 141px;
+	height: 38px;
+	font-weight: 600;
+	font-size: 16px;
+	text-decoration: none;
+	color: var(--btn-text);
+	background-color: var(--bg-color);
+	border: 1.5px solid var(--btn-text);
+	border-radius: 6px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.button:hover {
+	color: var(--bg-color);
+	background-color: var(--accent-color);
+	border-color: var(--accent-color);
+}
+
+@keyframes scaleIn {
+	from {
+		opacity: 0;
+		transform: scale(0.7);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+@media (max-width: 900px) {
+	.modal-container {
+		width: clamp(330px, 90vw, 900px);
+	}
+
+	.modal-inside-container {
+		width: clamp(300px, 80vw, 900px);
+	}
+
+	.right {
+		width: clamp(300px, 80vw, 500px);
+	}
+
+	.tech-stack {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.modal-title {
+		font-size: clamp(20px, 10vw, 30px);
+		line-height: clamp(10px, 10vh, 40px);
+	}
+
+	.architecture {
+		width: clamp(300px, 70vw, 500px);
+	}
+
+	.content-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.center {
+		margin: 20px 0px;
+		height: 3px;
+		width: clamp(300px, 70vw, 500px);
+		background-color: var(--accent-color);
+	}
+}

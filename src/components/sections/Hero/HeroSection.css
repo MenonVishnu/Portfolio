@@ -2,11 +2,10 @@
 
 .hero-section {
 	width: 100%;
-	height: calc(100vh - 72px);
-	min-height: 550px;
-	max-height: min(900px, 60vw); /* Limit height in desktop to prevent vertical distortion on tall viewports */
-	margin-top: 72px;
-	padding: 40px 4%;
+	height: 100vh;
+	min-height: 600px;
+	max-height: min(950px, 65vw); /* Limit height in desktop to prevent vertical distortion on tall viewports */
+	padding: 112px 4% 40px 4%; /* Pushes content down to offset the fixed header, plus 40px top padding */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -299,7 +298,7 @@ body.dark-mode .hero-portrait-image {
 @media (max-width: 900px) {
 	.hero-section {
 		height: auto;
-		min-height: calc(100vh - 72px);
+		min-height: 100vh;
 		max-height: none;
 		padding: 100px 6% 60px 6%;
 		overflow: hidden;

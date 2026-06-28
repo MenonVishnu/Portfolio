@@ -43,6 +43,7 @@ import Architecture_10 from "../assets/ProjectArchitecture/videoadplayer.png";
 // Featured Work Images
 import FeaturedImage1 from "../assets/FeaturedProjects/Wellonova1.png";
 import FeaturedImage2 from "../assets/FeaturedProjects/Wellonova2.png";
+import FeaturedImage3 from "../assets/FeaturedProjects/Wellonova3.png";
 
 // Experience Icons
 import JioIcon from "../assets/jio.png";
@@ -102,7 +103,7 @@ export const featuredProjects = [
 		// status: "live",
 		role: "Founding Engineer",
 		tags: ["React Native", "WebRTC", "Healthcare"],
-		screenshots: [FeaturedImage1, FeaturedImage2, FeaturedImage2], // User will add screenshots here later
+		screenshots: [FeaturedImage1, FeaturedImage2, FeaturedImage3], // User will add screenshots here later
 		url: null,
 	},
 	{

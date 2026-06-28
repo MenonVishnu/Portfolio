@@ -3,6 +3,7 @@
 .hero-section {
 	width: 100%;
 	min-height: calc(100vh - 72px);
+	max-height: 900px; /* Limit height in desktop to prevent vertical distortion on tall viewports */
 	margin-top: 72px;
 	padding: 40px 4%;
 	display: flex;
@@ -269,6 +270,7 @@ body.dark-mode .status-badge-inline {
 .hero-portrait-image {
 	height: 100%;
 	width: auto;
+	max-width: 100%;
 	object-fit: contain;
 	object-position: right bottom;
 	-webkit-mask-image: linear-gradient(to right, transparent 0%, transparent 8%, black 45%);
@@ -297,6 +299,7 @@ body.dark-mode .hero-portrait-image {
 	.hero-section {
 		padding: 100px 6% 60px 6%;
 		overflow: hidden;
+		max-height: none; /* Allow natural height expansion on mobile */
 	}
 	
 	.hero-container {

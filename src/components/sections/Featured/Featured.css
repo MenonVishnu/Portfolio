@@ -209,7 +209,7 @@ body.dark-mode .triptych-placeholder {
 .triptych-blur-overlay {
 	position: absolute;
 	inset: 0;
-	border-radius: 14px;
+	border-radius: 15px;
 	backdrop-filter: blur(8px);
 	-webkit-backdrop-filter: blur(8px);
 	background-color: rgba(0, 0, 0, 0.2);

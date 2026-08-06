@@ -1,5 +1,6 @@
 import React from "react";
 import { featuredProjects } from "../../../constants/portfolioData";
+import ScrollReveal from "../../common/ScrollReveal/ScrollReveal";
 import "./Featured.css";
 
 function FeaturedCard({ project }) {
@@ -112,17 +113,21 @@ function Featured() {
 	return (
 		<section id="featured" className="featured-section">
 			<div className="featured-container">
-				<div className="featured-eyebrow">
-					<span className="featured-eyebrow-line"></span>
-					FEATURED WORK
-				</div>
-				<h2 className="featured-headline">
-					From <span className="italic-serif">idea</span> to <span className="italic-serif">production.</span>
-				</h2>
+				<ScrollReveal variant="fade-up" delay={0}>
+					<div className="featured-eyebrow">
+						<span className="featured-eyebrow-line"></span>
+						FEATURED WORK
+					</div>
+					<h2 className="featured-headline">
+						From <span className="italic-serif">idea</span> to <span className="italic-serif">production.</span>
+					</h2>
+				</ScrollReveal>
 
 				<div className="featured-grid">
-					{featuredProjects.map((project) => (
-						<FeaturedCard project={project} key={project.id} />
+					{featuredProjects.map((project, idx) => (
+						<ScrollReveal variant="fade-up" delay={idx * 150} key={project.id}>
+							<FeaturedCard project={project} />
+						</ScrollReveal>
 					))}
 				</div>
 			</div>

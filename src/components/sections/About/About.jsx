@@ -1,5 +1,6 @@
 import React from "react";
 import { aboutData } from "../../../constants/portfolioData";
+import ScrollReveal from "../../common/ScrollReveal/ScrollReveal";
 import "./About.css";
 
 function About() {
@@ -7,7 +8,7 @@ function About() {
 		<section id="about" className="about-section">
 			<div className="about-container">
 				{/* Left Column: Eyebrow + Headline */}
-				<div className="about-left">
+				<ScrollReveal className="about-left" variant="fade-up" delay={0}>
 					<div className="about-eyebrow">
 						<span className="about-eyebrow-line"></span>
 						{aboutData.eyebrow}
@@ -16,28 +17,34 @@ function About() {
 						Engineer with <br />
 						<span className="italic-serif">taste.</span>
 					</h2>
-				</div>
+				</ScrollReveal>
 
 				{/* Right Column: Body Copy + Divider + Stat Row */}
 				<div className="about-right">
 					<div className="about-body">
 						{aboutData.paragraphs.map((para, index) => (
-							<p className="about-paragraph" key={index}>
-								{para}
-							</p>
+							<ScrollReveal
+								variant="fade-up"
+								delay={ index * 100}
+								key={index}
+							>
+								<p className="about-paragraph">{para}</p>
+							</ScrollReveal>
 						))}
 					</div>
 
-					<div className="about-divider"></div>
+					<ScrollReveal variant="fade-up" delay={200}>
+						<div className="about-divider"></div>
+					</ScrollReveal>
 
-					<div className="about-stats-row">
+					<ScrollReveal className="about-stats-row" variant="fade-up" delay={250}>
 						{aboutData.stats.map((stat, index) => (
 							<div className="about-stat-col" key={index}>
 								<span className="stat-number">{stat.number}</span>
 								<span className="stat-label">{stat.label}</span>
 							</div>
 						))}
-					</div>
+					</ScrollReveal>
 				</div>
 			</div>
 		</section>

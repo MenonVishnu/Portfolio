@@ -1,5 +1,6 @@
 import React from "react";
 import { skillTrays } from "../../../constants/portfolioData";
+import ScrollReveal from "../../common/ScrollReveal/ScrollReveal";
 import "./Skills.css";
 
 function Skills() {
@@ -7,7 +8,7 @@ function Skills() {
 		<section id="skill" className="skills-section">
 			<div className="skills-container">
 				{/* Consistent Eyebrow + Headline */}
-				<div className="skills-header">
+				<ScrollReveal className="skills-header" variant="fade-up" delay={0}>
 					<div className="skills-eyebrow">
 						<span className="skills-eyebrow-line"></span>
 						SKILLS
@@ -15,10 +16,10 @@ function Skills() {
 					<h2 className="skills-headline">
 						My <span className="italic-serif">technical</span> board.
 					</h2>
-				</div>
+				</ScrollReveal>
 
 				{/* Skeuomorphic Board Panel */}
-				<div className="skills-board-panel">
+				<ScrollReveal className="skills-board-panel" variant="zoom-in" delay={100} duration={800}>
 					{/* Dot grid pattern overlay */}
 					<div className="skills-dot-grid"></div>
 
@@ -29,7 +30,12 @@ function Skills() {
 					{/* Horizontal Category Trays */}
 					<div className="skills-trays-container">
 						{skillTrays.map((tray, trayIdx) => (
-							<div className="skills-tray" key={trayIdx}>
+							<ScrollReveal
+								className="skills-tray"
+								variant="fade-up"
+								delay={150 + trayIdx * 120}
+								key={trayIdx}
+							>
 								<div className="tray-header-row">
 									<h3 className="tray-title">{tray.category}</h3>
 									<span className="tray-number">
@@ -76,10 +82,10 @@ function Skills() {
 										</p>
 									</div>
 								)}
-							</div>
+							</ScrollReveal>
 						))}
 					</div>
-				</div>
+				</ScrollReveal>
 			</div>
 		</section>
 	);

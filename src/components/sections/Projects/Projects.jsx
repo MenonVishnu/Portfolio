@@ -1,5 +1,6 @@
 import React from "react";
 import { otherProjects } from "../../../constants/portfolioData";
+import ScrollReveal from "../../common/ScrollReveal/ScrollReveal";
 import "./Projects.css";
 
 function Projects() {
@@ -7,16 +8,18 @@ function Projects() {
 		<section id="project" className="projects-section">
 			<div className="projects-container">
 				{/* Section Header */}
-				<div className="projects-eyebrow">
-					<span className="projects-eyebrow-line"></span>
-					OTHER PROJECTS
-				</div>
-				<h2 className="projects-headline">
-					Things I've built <span className="italic-serif">on the side.</span>
-				</h2>
+				<ScrollReveal variant="fade-up" delay={0}>
+					<div className="projects-eyebrow">
+						<span className="projects-eyebrow-line"></span>
+						OTHER PROJECTS
+					</div>
+					<h2 className="projects-headline">
+						Things I've built <span className="italic-serif">on the side.</span>
+					</h2>
+				</ScrollReveal>
 
 				{/* Terminal Container */}
-				<div className="terminal-container">
+				<ScrollReveal className="terminal-container" variant="fade-up" delay={100} duration={800}>
 					{/* Terminal Top Bar */}
 					<div className="terminal-header">
 						<div className="terminal-dots">
@@ -40,7 +43,12 @@ function Projects() {
 						{/* Project List */}
 						<div className="terminal-projects-list">
 							{otherProjects.map((project, index) => (
-								<div className="terminal-project-block" key={project.name}>
+								<ScrollReveal
+									className="terminal-project-block"
+									variant="fade-up"
+									delay={150 + index * 80}
+									key={project.name}
+								>
 									{/* Directory Line */}
 									<div className="terminal-dir-line">
 										<div className="dir-left">
@@ -75,7 +83,7 @@ function Projects() {
 											</span>
 										))}
 									</div>
-								</div>
+								</ScrollReveal>
 							))}
 						</div>
 
@@ -85,10 +93,10 @@ function Projects() {
 							<span className="terminal-cursor"></span>
 						</div>
 					</div>
-				</div>
+				</ScrollReveal>
 
 				{/* Footer Caption */}
-				<div className="terminal-caption">
+				<ScrollReveal className="terminal-caption" variant="fade-up" delay={200}>
 					// {otherProjects.length} repositories —{" "}
 					<a
 						href="https://github.com/MenonVishnu"
@@ -98,7 +106,7 @@ function Projects() {
 					>
 						more on github
 					</a>
-				</div>
+				</ScrollReveal>
 			</div>
 		</section>
 	);

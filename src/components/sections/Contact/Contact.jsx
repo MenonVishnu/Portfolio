@@ -1,26 +1,28 @@
 import React from "react";
 import { contactData } from "../../../constants/portfolioData";
+import ScrollReveal from "../../common/ScrollReveal/ScrollReveal";
 import "./Contact.css";
 
 function Contact() {
 	return (
 		<section id="contact" className="contact-section">
 			<div className="contact-container">
-				{/* Eyebrow */}
-				<div className="contact-eyebrow">
-					<span className="contact-eyebrow-line"></span>
-					CONTACT
-				</div>
+				{/* Eyebrow & Headline */}
+				<ScrollReveal variant="fade-up" delay={0}>
+					<div className="contact-eyebrow">
+						<span className="contact-eyebrow-line"></span>
+						CONTACT
+					</div>
 
-				{/* Headline */}
-				<h2 className="contact-headline">
-					Let's talk,
-					<br />
-					<span className="italic-serif">shall we?</span>
-				</h2>
+					<h2 className="contact-headline">
+						Let's talk,
+						<br />
+						<span className="italic-serif">shall we?</span>
+					</h2>
+				</ScrollReveal>
 
 				{/* Email Link */}
-				<div className="contact-email-container">
+				<ScrollReveal className="contact-email-container" variant="fade-up" delay={120}>
 					<a href={`mailto:${contactData.links.email}`} className="contact-email-link">
 						{contactData.links.email}
 						<svg
@@ -38,10 +40,10 @@ function Contact() {
 							<polyline points="7 7 17 7 17 17"></polyline>
 						</svg>
 					</a>
-				</div>
+				</ScrollReveal>
 
 				{/* Social Row */}
-				<div className="contact-socials">
+				<ScrollReveal className="contact-socials" variant="fade-up" delay={200}>
 					<a
 						href={contactData.links.github}
 						target="_blank"
@@ -84,7 +86,7 @@ function Contact() {
 							<circle cx="4" cy="4" r="2"></circle>
 						</svg>
 					</a>
-				</div>
+				</ScrollReveal>
 			</div>
 		</section>
 	);
